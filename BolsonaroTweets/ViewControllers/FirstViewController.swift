@@ -20,16 +20,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return TweetController.shared.timeline?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
+        
+        let tweet = TweetController.shared.timeline?[indexPath.row]
+        cell.tweet = tweet
         
         return cell
     }
-    
-
-
 }
 

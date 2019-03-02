@@ -25,7 +25,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="53" id="6z2-Ka-tdm" customClass="TweetCellTableViewCell" customModule="BolsonaroTweets" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="53" id="6z2-Ka-tdm" customClass="TweetCell" customModule="BolsonaroTweets" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6z2-Ka-tdm" id="ROb-tx-RR8">
@@ -84,7 +84,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="wm6-EP-sOc" id="NBg-ds-0ho"/>
+                                            <outlet property="dateLabel" destination="wm6-EP-sOc" id="pDP-Y3-Lub"/>
                                             <outlet property="handleLabel" destination="Mmc-QD-YnL" id="mjk-nY-5Mf"/>
                                             <outlet property="nameLabel" destination="jT5-HV-yPr" id="BLe-0S-NYl"/>
                                             <outlet property="tweetTextLabel" destination="KbS-76-Idb" id="QBn-uA-RrU"/>

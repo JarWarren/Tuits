@@ -31,6 +31,5 @@ class TweetCell: UITableViewCell {
         handleLabel.text = "@" + handle
         dateLabel.text = date
         tweetTextLabel.text = text
-        
     }
 }

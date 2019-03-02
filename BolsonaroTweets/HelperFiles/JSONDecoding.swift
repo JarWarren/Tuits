@@ -8,15 +8,16 @@
 
 import Foundation
 
+
 struct Tuit: Decodable {
     
-    let text: String
-    let created_at: String
-    let user: User
+    let text: String?
+    let created_at: String?
+    let user: User?
 }
 
 struct User: Decodable {
     
-    let name: String
-    let screen_name: String
+    let name: String?
+    let screen_name: String?
 }
