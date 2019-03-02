@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E5194B0222A365200F8DA66 /* JSONDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* JSONDecoding.swift */; };
+		7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B1222A434200F8DA66 /* TweetCell.swift */; };
+		7E9D963C222A204E0000C339 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E9D963B222A204E0000C339 /* sample.json */; };
+		7E9D9640222A20B80000C339 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D963F222A20B80000C339 /* Tweet.swift */; };
 		7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A22228A071005CE163 /* AppDelegate.swift */; };
 		7EE679A52228A071005CE163 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A42228A071005CE163 /* FirstViewController.swift */; };
 		7EE679A72228A071005CE163 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A62228A071005CE163 /* SecondViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E5194AF222A365200F8DA66 /* JSONDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoding.swift; sourceTree = "<group>"; };
+		7E5194B1222A434200F8DA66 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		7E9D963B222A204E0000C339 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		7E9D963F222A20B80000C339 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7EE6799F2228A071005CE163 /* BolsonaroTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BolsonaroTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE679A22228A071005CE163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE679A42228A071005CE163 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5194AC222A360F00F8DA66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E5194B1222A434200F8DA66 /* TweetCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E5194AD222A362400F8DA66 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		7E5194AE222A363600F8DA66 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7E5194AF222A365200F8DA66 /* JSONDecoding.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		7E9D9639222A20230000C339 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7EE679A82228A071005CE163 /* Main.storyboard */,
+				7EE679AD2228A072005CE163 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7E9D963A222A20310000C339 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EE679A22228A071005CE163 /* AppDelegate.swift */,
+				7EE679AB2228A072005CE163 /* Assets.xcassets */,
+				7EE679B02228A072005CE163 /* Info.plist */,
+				7E9D963B222A204E0000C339 /* sample.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E9D963D222A20820000C339 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EE679A42228A071005CE163 /* FirstViewController.swift */,
+				7EE679A62228A071005CE163 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E9D963E222A20A10000C339 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E9D963F222A20B80000C339 /* Tweet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7EE679962228A071005CE163 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +124,13 @@
 		7EE679A12228A071005CE163 /* BolsonaroTweets */ = {
 			isa = PBXGroup;
 			children = (
-				7EE679A22228A071005CE163 /* AppDelegate.swift */,
-				7EE679A42228A071005CE163 /* FirstViewController.swift */,
-				7EE679A62228A071005CE163 /* SecondViewController.swift */,
-				7EE679A82228A071005CE163 /* Main.storyboard */,
-				7EE679AB2228A072005CE163 /* Assets.xcassets */,
-				7EE679AD2228A072005CE163 /* LaunchScreen.storyboard */,
-				7EE679B02228A072005CE163 /* Info.plist */,
+				7E9D9639222A20230000C339 /* UI */,
+				7E5194AC222A360F00F8DA66 /* Views */,
+				7E9D963D222A20820000C339 /* ViewControllers */,
+				7E5194AD222A362400F8DA66 /* ModelControllers */,
+				7E9D963E222A20A10000C339 /* Models */,
+				7E5194AE222A363600F8DA66 /* HelperFiles */,
+				7E9D963A222A20310000C339 /* Resources */,
 			);
 			path = BolsonaroTweets;
 			sourceTree = "<group>";
@@ -126,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE679AF2228A072005CE163 /* LaunchScreen.storyboard in Resources */,
+				7E9D963C222A204E0000C339 /* sample.json in Resources */,
 				7EE679AC2228A072005CE163 /* Assets.xcassets in Resources */,
 				7EE679AA2228A071005CE163 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +210,9 @@
 				7EE679A72228A071005CE163 /* SecondViewController.swift in Sources */,
 				7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */,
 				7EE679A52228A071005CE163 /* FirstViewController.swift in Sources */,
+				7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */,
+				7E5194B0222A365200F8DA66 /* JSONDecoding.swift in Sources */,
+				7E9D9640222A20B80000C339 /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVDL2745KX;
-				INFOPLIST_FILE = BolsonaroTweets/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BolsonaroTweets/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVDL2745KX;
-				INFOPLIST_FILE = BolsonaroTweets/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BolsonaroTweets/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
