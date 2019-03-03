@@ -16,7 +16,7 @@ class TweetController {
     var timeline: [Tweet]?
     
     func loadTweets() {
-        TwitterController.fetchTweets { (tweets) in
+        TwitterController.loadTweets { (tweets) in
             guard let tweets = tweets else { return }
             self.timeline = tweets
         }
