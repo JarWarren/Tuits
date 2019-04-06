@@ -14,7 +14,7 @@ class TweetController: NetworkManager {
     
     static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24") else { completion(.failure(NetworkResponse.failed)); return }
+        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended") else { completion(.failure(NetworkResponse.failed)); return }
         
         var request = URLRequest(url: baseURL)
         request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
@@ -44,11 +44,7 @@ class TweetController: NetworkManager {
                         
                         for tuit in timeline {
                             
-                            guard let date = tuit.created_at?.prefix(16),
-                                let handle = tuit.user?.screen_name,
-                                let name = tuit.user?.name,
-                                let text = tuit.text else { completion(.failure(NetworkResponse.unableToDecode)); return }
-                            let tweet = Tweet(date: String(date), handle: handle, name: name, text: text)
+                            guard let tweet = Tweet(tuit: tuit) else { completion(.failure(NetworkResponse.unableToDecode)); return }
                             tweets.append(tweet)
                         }
                         
@@ -86,5 +82,3 @@ class TweetController: NetworkManager {
         return APIKey
     }
 }
-
-// https://developer.twitter.com/en/docs/basics/authentication/overview/application-only
