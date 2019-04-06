@@ -1,983 +1,427 @@
 [
     {
-        "coordinates": null,
+        "created_at": "Thu Apr 06 15:28:43 +0000 2017",
+        "id": 850007368138018817,
+        "id_str": "850007368138018817",
+        "text": "RT @TwitterDev: 1/ Today we’re sharing our vision for the future of the Twitter API platform!nhttps://t.co/XweGngmxlP",
         "truncated": false,
-        "created_at": "Tue Aug 28 21:16:23 +0000 2012",
-        "favorited": false,
-        "id_str": "240558470661799936",
-        "in_reply_to_user_id_str": null,
         "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
+            "hashtags": [],
+            "symbols": [],
             "user_mentions": [
-                
+                {
+                    "screen_name": "TwitterDev",
+                    "name": "TwitterDev",
+                    "id": 2244994945,
+                    "id_str": "2244994945",
+                    "indices": [
+                        3,
+                        14
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/XweGngmxlP",
+                    "expanded_url": "https://cards.twitter.com/cards/18ce53wgo4h/3xo1c",
+                    "display_url": "cards.twitter.com/cards/18ce53wg…",
+                    "indices": [
+                        94,
+                        117
+                    ]
+                }
             ]
         },
-        "text": "Poucas palavras que significam muito para o bem estar do brasileiro!",
-        "contributors": null,
-        "id": 240558470661799936,
-        "retweet_count": 0,
+        "source": "<a href=http://twitter.com rel=nofollow>Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
         "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
         "in_reply_to_user_id": null,
-        "place": null,
-        "source": "OAuth Dancer Reborn",
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
         "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "C0DEED",
-            "profile_image_url": "http://a0.twimg.com/profile_images/730275945/oauth-dancer_normal.jpg",
-            "created_at": "Wed Mar 03 19:37:35 +0000 2010",
+            "id": 6253282,
+            "id_str": "6253282",
+            "name": "Twitter API",
+            "screen_name": "twitterapi",
             "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "119476949",
-            "is_translator": false,
-            "profile_link_color": "0084B4",
+            "description": "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website.",
+            "url": "http://t.co/78pYTvWfJd",
             "entities": {
                 "url": {
                     "urls": [
                         {
-                            "expanded_url": null,
-                            "url": "http://bit.ly/oauth-dancer",
+                            "url": "http://t.co/78pYTvWfJd",
+                            "expanded_url": "https://dev.twitter.com",
+                            "display_url": "dev.twitter.com",
                             "indices": [
                                 0,
-                                26
-                            ],
-                            "display_url": null
+                                22
+                            ]
                         }
                     ]
                 },
-                "description": null
+                "description": {
+                    "urls": []
+                }
             },
-            "default_profile": false,
-            "url": "http://bit.ly/oauth-dancer",
-            "contributors_enabled": false,
-            "favourites_count": 7,
-            "utc_offset": null,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/730275945/oauth-dancer_normal.jpg",
-            "id": 119476949,
-            "listed_count": 1,
-            "profile_use_background_image": true,
-            "profile_text_color": "333333",
-            "followers_count": 28,
-            "lang": "en",
             "protected": false,
+            "followers_count": 6172353,
+            "friends_count": 46,
+            "listed_count": 13091,
+            "created_at": "Wed May 23 06:01:13 +0000 2007",
+            "favourites_count": 26,
+            "utc_offset": -25200,
+            "time_zone": "Pacific Time (US & Canada)",
             "geo_enabled": true,
-            "notifications": false,
-            "description": "",
+            "verified": true,
+            "statuses_count": 3583,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
             "profile_background_color": "C0DEED",
-            "verified": false,
-            "time_zone": null,
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/80151733/oauth-dance.png",
-            "statuses_count": 166,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/80151733/oauth-dance.png",
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/656927849/miyt9dpjz77sc0w3d4vj.png",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/656927849/miyt9dpjz77sc0w3d4vj.png",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/6253282/1431474710",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
             "default_profile_image": false,
-            "friends_count": 14,
-            "following": false,
-            "show_all_inline_media": false,
-            "screen_name": "jairbolsonaro"
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "regular"
         },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": {
-            "coordinates": [
-                -122.25831,
-                37.871609
-            ],
-            "type": "Point"
-        },
-        "truncated": false,
-        "created_at": "Tue Aug 28 21:08:15 +0000 2012",
-        "favorited": false,
-        "id_str": "240556426106372096",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                {
-                    "expanded_url": "http://blogs.ischool.berkeley.edu/i290-abdt-s12/",
-                    "url": "http://t.co/bfj7zkDJ",
-                    "indices": [
-                        79,
-                        99
-                    ],
-                    "display_url": "blogs.ischool.berkeley.edu/i290-abdt-s12/"
-                }
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                {
-                    "name": "Cal",
-                    "id_str": "17445752",
-                    "id": 17445752,
-                    "indices": [
-                        60,
-                        64
-                    ],
-                    "screen_name": "Cal"
-                },
-                {
-                    "name": "Othman Laraki",
-                    "id_str": "20495814",
-                    "id": 20495814,
-                    "indices": [
-                        70,
-                        77
-                    ],
-                    "screen_name": "othman"
-                }
-            ]
-        },
-        "text": "Sem energia não há desenvolvimento! Vamos nesta direção! Obrigado Presidente Marito!",
+        "geo": null,
+        "coordinates": null,
+        "place": null,
         "contributors": null,
-        "id": 240556426106372096,
-        "retweet_count": 3,
-        "in_reply_to_status_id_str": null,
-        "geo": {
-            "coordinates": [
-                37.871609,
-                -122.25831
-            ],
-            "type": "Point"
+        "retweeted_status": {
+            "created_at": "Thu Apr 06 15:24:15 +0000 2017",
+            "id": 850006245121695744,
+            "id_str": "850006245121695744",
+            "text": "1/ Today we’re sharing our vision for the future of the Twitter API platform!nhttps://t.co/XweGngmxlP",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/XweGngmxlP",
+                        "expanded_url": "https://cards.twitter.com/cards/18ce53wgo4h/3xo1c",
+                        "display_url": "cards.twitter.com/cards/18ce53wg…",
+                        "indices": [
+                            78,
+                            101
+                        ]
+                    }
+                ]
+            },
+            "source": "src",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 2244994945,
+                "id_str": "2244994945",
+                "name": "TwitterDev",
+                "screen_name": "TwitterDev",
+                "location": "Internet",
+                "description": "Your official source for Twitter Platform news, updates & events. Need technical help? Visit https://t.co/mGHnxZCxkt ⌨️  #TapIntoTwitter",
+                "url": "https://t.co/66w26cua1O",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/66w26cua1O",
+                                "expanded_url": "https://dev.twitter.com/",
+                                "display_url": "dev.twitter.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/mGHnxZCxkt",
+                                "expanded_url": "https://twittercommunity.com/",
+                                "display_url": "twittercommunity.com",
+                                "indices": [
+                                    93,
+                                    116
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "protected": false,
+                "followers_count": 465425,
+                "friends_count": 1523,
+                "listed_count": 1168,
+                "created_at": "Sat Dec 14 04:35:55 +0000 2013",
+                "favourites_count": 2098,
+                "utc_offset": -25200,
+                "time_zone": "Pacific Time (US & Canada)",
+                "geo_enabled": true,
+                "verified": true,
+                "statuses_count": 3031,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "FFFFFF",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/530814764687949824/npQQVkq8_normal.png",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/530814764687949824/npQQVkq8_normal.png",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/2244994945/1396995246",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": true,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "regular"
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 284,
+            "favorite_count": 399,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
         },
+        "is_quote_status": false,
+        "retweet_count": 284,
+        "favorite_count": 0,
+        "favorited": false,
         "retweeted": false,
         "possibly_sensitive": false,
-        "in_reply_to_user_id": null,
-        "place": {
-            "name": "Berkeley",
-            "country_code": "US",
-            "country": "United States",
-            "attributes": {
-            },
-            "url": "http://api.twitter.com/1/geo/id/5ef5b7f391e30aff.json",
-            "id": "5ef5b7f391e30aff",
-            "bounding_box": {
-                "coordinates": [
-                    [
-                        [
-                            -122.367781,
-                            37.835727
-                        ],
-                        [
-                            -122.234185,
-                            37.835727
-                        ],
-                        [
-                            -122.234185,
-                            37.905824
-                        ],
-                        [
-                            -122.367781,
-                            37.905824
-                        ]
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Apr 03 16:09:50 +0000 2017",
+        "id": 848930551989915648,
+        "id_str": "848930551989915648",
+        "text": "RT @TwitterMktg: Starting today, businesses can request and share locations when engaging with people in Direct Messages. https://t.co/rpYn…",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "TwitterMktg",
+                    "name": "Twitter Marketing",
+                    "id": 357750891,
+                    "id_str": "357750891",
+                    "indices": [
+                        3,
+                        15
                     ]
-                ],
-                "type": "Polygon"
-            },
-            "full_name": "Berkeley, CA",
-            "place_type": "city"
+                }
+            ],
+            "urls": []
         },
-        "source": "Safari on iOS",
+        "source": "src",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
         "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_background_tile": false,
-            "profile_sidebar_border_color": "C0DEED",
-            "profile_image_url": "http://a0.twimg.com/profile_images/1270234259/raffi-headshot-casual_normal.png",
-            "created_at": "Sun Aug 19 14:24:06 +0000 2007",
-            "location": "San Francisco, California",
-            "follow_request_sent": false,
-            "id_str": "8285392",
-            "is_translator": false,
-            "profile_link_color": "0084B4",
+            "id": 6253282,
+            "id_str": "6253282",
+            "name": "Twitter API",
+            "screen_name": "twitterapi",
+            "location": "San Francisco, CA",
+            "description": "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website.",
+            "url": "http://t.co/78pYTvWfJd",
             "entities": {
                 "url": {
                     "urls": [
                         {
-                            "expanded_url": "http://about.me/raffi.krikorian",
-                            "url": "http://t.co/eNmnM6q",
+                            "url": "http://t.co/78pYTvWfJd",
+                            "expanded_url": "https://dev.twitter.com",
+                            "display_url": "dev.twitter.com",
                             "indices": [
                                 0,
-                                19
-                            ],
-                            "display_url": "about.me/raffi.krikorian"
+                                22
+                            ]
                         }
                     ]
                 },
                 "description": {
-                    "urls": [
-                        
-                    ]
+                    "urls": []
                 }
             },
-            "default_profile": true,
-            "url": "http://t.co/eNmnM6q",
-            "contributors_enabled": false,
-            "favourites_count": 724,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/1270234259/raffi-headshot-casual_normal.png",
-            "id": 8285392,
-            "listed_count": 619,
-            "profile_use_background_image": true,
-            "profile_text_color": "333333",
-            "followers_count": 18752,
-            "lang": "en",
             "protected": false,
+            "followers_count": 6172353,
+            "friends_count": 46,
+            "listed_count": 13091,
+            "created_at": "Wed May 23 06:01:13 +0000 2007",
+            "favourites_count": 26,
+            "utc_offset": -25200,
+            "time_zone": "Pacific Time (US & Canada)",
             "geo_enabled": true,
-            "notifications": false,
-            "description": "Director of @twittereng's Platform Services. I break things.",
+            "verified": true,
+            "statuses_count": 3583,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
             "profile_background_color": "C0DEED",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
-            "statuses_count": 5007,
-            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
-            "default_profile_image": false,
-            "friends_count": 701,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "O Presidente da @Caixa , Pedro Guimarães suspendeu contratos suspeitos envolvendo caixas automáticos e cofres. Auditoria identificou preços para o fornecimento de serviços específicos no valor de cerca de R$ 150 milhões, havendo indícios de direcionamento e superfaturamento.",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/656927849/miyt9dpjz77sc0w3d4vj.png",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/656927849/miyt9dpjz77sc0w3d4vj.png",
             "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/6253282/1431474710",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
             "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
+            "has_extended_profile": false,
+            "default_profile": false,
             "default_profile_image": false,
-            "friends_count": 5444,
             "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "regular"
         },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "O Brasil perdeu no dia de ontem o Sr. Paulo Nogueira Neto, precursor da boa política ambiental.
-- Secretário Especial do Meio Ambiente nos governos Geisel e Figueiredo deixa-nos um legado de respeito ao meio ambiente e ao produtor rural.
-- Deus conforte seus familiares e amigos.",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
         "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
         "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "O Secretário da Pesca @jorgeseif tem recebido relatos e proporá estudos, e comprovada a eficiência científica, levará à análise do Ministério da Saúde para a adoção como terapia de cura alternativa e possivelmente mais barata que as existentes.",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
         "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "Mais de um milhão de pessoas sofrem queimaduras por ano no Brasil e somente andanças revelam conhecimento e possíveis ajudas no tratamento de lesões. A pele da tilápia tem se revelado excelente neste tratamento.",
         "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
+        "retweeted_status": {
+            "created_at": "Mon Apr 03 16:05:05 +0000 2017",
+            "id": 848929357519241216,
+            "id_str": "848929357519241216",
+            "text": "Starting today, businesses can request and share locations when engaging with people in Direct Messages. https://t.co/rpYndqWfQw",
+            "truncated": false,
             "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/rpYndqWfQw",
+                        "expanded_url": "https://cards.twitter.com/cards/5wzucr/3x700",
+                        "display_url": "cards.twitter.com/cards/5wzucr/3…",
+                        "indices": [
+                            105,
+                            128
+                        ]
+                    }
+                ]
             },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
+            "source": "src",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 357750891,
+                "id_str": "357750891",
+                "name": "Twitter Marketing",
+                "screen_name": "TwitterMktg",
+                "location": "Twitter HQ ",
+                "description": "Twitter’s place for marketers, agencies, and creative thinkers ⭐ Bringing you insights, news, updates, and inspiration. Visit @TwitterAdsHelp for Ads support.",
+                "url": "https://t.co/Tfo4moo92y",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/Tfo4moo92y",
+                                "expanded_url": "https://marketing.twitter.com",
+                                "display_url": "marketing.twitter.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 924546,
+                "friends_count": 661,
+                "listed_count": 3893,
+                "created_at": "Thu Aug 18 21:08:15 +0000 2011",
+                "favourites_count": 1934,
+                "utc_offset": -25200,
+                "time_zone": "Pacific Time (US & Canada)",
+                "geo_enabled": true,
+                "verified": true,
+                "statuses_count": 6329,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/662767273/jvmxdpdrplhxcw8yvkv2.png",
+                "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/662767273/jvmxdpdrplhxcw8yvkv2.png",
+                "profile_background_tile": true,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/800953549697888256/UlXXL5h5_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/800953549697888256/UlXXL5h5_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/357750891/1487188210",
+                "profile_link_color": "19CF86",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none"
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 111,
+            "favorite_count": 162,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
         },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
+        "is_quote_status": false,
+        "retweet_count": 111,
+        "favorite_count": 0,
         "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "Em Alagoas, o ministro @tarcisiogdf inaugura o trecho de 34km duplicado na BR-101. Essa é a segunda inauguração de rodovia que fazemos no Nordeste em menos de 10 dias.",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
         "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "A reflexão é válida e extremamente realista: se o PT tivesse vencido as últimas eleições presidenciais junto com o PSOL e PCdoB, o Brasil hoje certamente estaria numa infeliz ditadura como a venezuelana. Fato claro nos posicionamentos dos representantes destes partidos!",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "Seguimos avançando!",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
-    },
-    {
-        "coordinates": null,
-        "truncated": false,
-        "created_at": "Tue Aug 28 19:59:34 +0000 2012",
-        "favorited": false,
-        "id_str": "240539141056638977",
-        "in_reply_to_user_id_str": null,
-        "entities": {
-            "urls": [
-                
-            ],
-            "hashtags": [
-                
-            ],
-            "user_mentions": [
-                
-            ]
-        },
-        "text": "Estuda-se a implantação de placas solares ao longo dos canais para que a energia solar possa ser utilizada no bombeamento da água.",
-        "contributors": null,
-        "id": 240539141056638977,
-        "retweet_count": 1,
-        "in_reply_to_status_id_str": null,
-        "geo": null,
-        "retweeted": false,
-        "in_reply_to_user_id": null,
-        "place": null,
-        "source": "web",
-        "user": {
-            "name": "Jair M. Bolsonaro",
-            "profile_sidebar_fill_color": "FBFBFB",
-            "profile_background_tile": true,
-            "profile_sidebar_border_color": "000000",
-            "profile_image_url": "http://a0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "created_at": "Wed Mar 07 22:23:19 +0000 2007",
-            "location": "San Francisco, CA",
-            "follow_request_sent": false,
-            "id_str": "819797",
-            "is_translator": false,
-            "profile_link_color": "c71818",
-            "entities": {
-                "url": {
-                    "urls": [
-                        {
-                            "expanded_url": "http://www.rebelmouse.com/episod/",
-                            "url": "http://t.co/Lxw7upbN",
-                            "indices": [
-                                0,
-                                20
-                            ],
-                            "display_url": "rebelmouse.com/episod/"
-                        }
-                    ]
-                },
-                "description": {
-                    "urls": [
-                        
-                    ]
-                }
-            },
-            "default_profile": false,
-            "url": "http://t.co/Lxw7upbN",
-            "contributors_enabled": false,
-            "favourites_count": 15990,
-            "utc_offset": -28800,
-            "profile_image_url_https": "https://si0.twimg.com/profile_images/2546730059/f6a8zq58mg1hn0ha8vie_normal.jpeg",
-            "id": 819797,
-            "listed_count": 340,
-            "profile_use_background_image": true,
-            "profile_text_color": "D20909",
-            "followers_count": 7126,
-            "lang": "en",
-            "protected": false,
-            "geo_enabled": true,
-            "notifications": false,
-            "description": "Reality Technician, Twitter API team, synthesizer enthusiast; a most excellent adventure in timelines. I know it's hard to believe in something you can't see.",
-            "profile_background_color": "000000",
-            "verified": false,
-            "time_zone": "Pacific Time (US & Canada)",
-            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "statuses_count": 18076,
-            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/643655842/hzfv12wini4q60zzrthg.png",
-            "default_profile_image": false,
-            "friends_count": 5444,
-            "following": true,
-            "show_all_inline_media": true,
-            "screen_name": "jairbolsonaro"
-        },
-        "in_reply_to_screen_name": null,
-        "in_reply_to_status_id": null
+        "lang": "en"
     }
 ]

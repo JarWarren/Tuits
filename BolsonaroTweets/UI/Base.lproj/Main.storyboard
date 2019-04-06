@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Tweets-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="BolsonaroTweets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="TweetsVC" customModule="BolsonaroTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,62 +25,63 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="53" id="6z2-Ka-tdm" customClass="TweetCell" customModule="BolsonaroTweets" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="226" id="6z2-Ka-tdm" customClass="TweetCell" customModule="BolsonaroTweets" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6z2-Ka-tdm" id="ROb-tx-RR8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profPic" translatesAutoresizingMaskIntoConstraints="NO" id="nmP-7c-FeE">
-                                                    <rect key="frame" x="12" y="12" width="36" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="9OY-qt-CVp"/>
-                                                        <constraint firstAttribute="width" secondItem="nmP-7c-FeE" secondAttribute="height" multiplier="1:1" id="PEC-eq-8f0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
-                                                    <rect key="frame" x="60" y="17" width="105" height="26.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-W3-5o9">
+                                                    <rect key="frame" x="15" y="11" width="345" height="36"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jair M. Bolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-HV-yPr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jairbolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-QD-YnL">
-                                                            <rect key="frame" x="0.0" y="14.5" width="105" height="12"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profPic" translatesAutoresizingMaskIntoConstraints="NO" id="nmP-7c-FeE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="nmP-7c-FeE" secondAttribute="height" multiplier="1:1" id="OHP-h2-NzQ"/>
+                                                                <constraint firstAttribute="width" constant="36" id="PTz-uc-1Jp"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
+                                                            <rect key="frame" x="48" y="0.0" width="105" height="36"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jair M. Bolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-HV-yPr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@jairbolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-QD-YnL">
+                                                                    <rect key="frame" x="0.0" y="14.5" width="105" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD-Mth-YY ti:me AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-EP-sOc">
+                                                            <rect key="frame" x="165" y="0.0" width="180" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD-Mth-YY ti:me AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-EP-sOc">
-                                                    <rect key="frame" x="177" y="24" width="186" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full content of the tweet. No more than 140 characters. Followed or substituted by an image if applicable." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbS-76-Idb">
-                                                    <rect key="frame" x="27" y="60" width="321" height="61"/>
+                                                    <rect key="frame" x="15" y="47" width="345" height="168"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KbS-76-Idb" firstAttribute="top" secondItem="nmP-7c-FeE" secondAttribute="bottom" constant="12" id="9J1-g8-buA"/>
-                                                <constraint firstAttribute="trailing" secondItem="wm6-EP-sOc" secondAttribute="trailing" constant="12" id="DTq-HE-Rjo"/>
-                                                <constraint firstItem="epC-lG-dQJ" firstAttribute="leading" secondItem="nmP-7c-FeE" secondAttribute="trailing" constant="12" id="Dj0-nT-aBL"/>
-                                                <constraint firstItem="wm6-EP-sOc" firstAttribute="centerY" secondItem="nmP-7c-FeE" secondAttribute="centerY" id="NdE-Sa-Fwj"/>
-                                                <constraint firstItem="nmP-7c-FeE" firstAttribute="top" secondItem="ROb-tx-RR8" secondAttribute="top" constant="12" id="OyS-dq-Op8"/>
-                                                <constraint firstItem="KbS-76-Idb" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leadingMargin" constant="12" id="UYm-iZ-i7l"/>
-                                                <constraint firstItem="wm6-EP-sOc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="epC-lG-dQJ" secondAttribute="trailing" constant="12" id="UZr-3e-rJG"/>
-                                                <constraint firstItem="nmP-7c-FeE" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leading" constant="12" id="lIY-kt-s8z"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="KbS-76-Idb" secondAttribute="trailing" constant="12" id="nJE-WQ-bp9"/>
-                                                <constraint firstItem="epC-lG-dQJ" firstAttribute="centerY" secondItem="nmP-7c-FeE" secondAttribute="centerY" id="o1X-I5-qZB"/>
-                                                <constraint firstAttribute="bottom" secondItem="KbS-76-Idb" secondAttribute="bottom" constant="12" id="ztA-nR-MoG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ejB-W3-5o9" secondAttribute="trailing" id="0lP-Nv-mnc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KbS-76-Idb" secondAttribute="bottom" id="IWm-Xp-Xwu"/>
+                                                <constraint firstItem="KbS-76-Idb" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leadingMargin" id="gTL-0k-MtK"/>
+                                                <constraint firstItem="ejB-W3-5o9" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leadingMargin" id="jaf-xT-hMr"/>
+                                                <constraint firstItem="KbS-76-Idb" firstAttribute="top" secondItem="ejB-W3-5o9" secondAttribute="bottom" id="jlE-XH-sTe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KbS-76-Idb" secondAttribute="trailing" id="nol-Gi-dDa"/>
+                                                <constraint firstItem="ejB-W3-5o9" firstAttribute="top" secondItem="ROb-tx-RR8" secondAttribute="topMargin" id="pA7-nw-6lB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

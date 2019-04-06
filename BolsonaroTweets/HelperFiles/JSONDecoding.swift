@@ -4,10 +4,9 @@
 //
 //  Created by Jared Warren on 3/1/19.
 //  Copyright © 2019 Warren. All rights reserved.
-//
+//  swiftlint:disable identifier_name
 
 import Foundation
-
 
 struct Tuit: Decodable {
     
