@@ -1,5 +1,5 @@
 //
-//  JSONDecoding.swift
+//  Decoding.swift
 //  BolsonaroTweets
 //
 //  Created by Jared Warren on 3/1/19.
@@ -10,7 +10,7 @@ import Foundation
 
 struct Tuit: Decodable {
     
-    let text: String?
+    let full_text: String?
     let created_at: String?
     let user: User?
 }

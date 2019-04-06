@@ -42,8 +42,12 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return tweets.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,9 +55,31 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let cell = cell as? TweetCell {
             
-            cell.tweet = tweets[indexPath.row]
+            cell.tweet = tweets[indexPath.section]
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.0196332261, green: 0.6651400328, blue: 0.2522620261, alpha: 1)
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.0196332261, green: 0.6651400328, blue: 0.2522620261, alpha: 1)
+        return view
     }
 }
