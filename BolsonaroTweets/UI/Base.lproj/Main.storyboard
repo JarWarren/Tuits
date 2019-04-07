@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCW-X6-gdh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCW-X6-gdh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="548"/>
+                                <color key="backgroundColor" red="0.75254386660000006" green="0.88212066889999996" blue="0.62348568439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.75254386660000006" green="0.88212066889999996" blue="0.62348568439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.75254386660000006" green="0.88212066889999996" blue="0.62348568439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="226" id="6z2-Ka-tdm" customClass="TweetCell" customModule="BolsonaroTweets" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
@@ -93,18 +93,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRK-SW-Sbr" customClass="DFPBannerView">
+                                <rect key="frame" x="27.5" y="568" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.75254386660000006" green="0.88212066889999996" blue="0.62348568439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fon-6L-BOL"/>
+                                    <constraint firstAttribute="width" constant="320" id="HxR-LC-fcR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jCW-X6-gdh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="7Cx-zi-f2S"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="RRK-SW-Sbr" secondAttribute="bottom" id="7no-g4-z7L"/>
+                            <constraint firstItem="RRK-SW-Sbr" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="Ol9-cl-EZc"/>
                             <constraint firstItem="jCW-X6-gdh" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="eli-jR-G3g"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="jCW-X6-gdh" secondAttribute="bottom" id="hfH-3D-pSX"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="jCW-X6-gdh" secondAttribute="trailing" id="utg-jo-3L8"/>
+                            <constraint firstItem="RRK-SW-Sbr" firstAttribute="top" secondItem="jCW-X6-gdh" secondAttribute="bottom" id="vJ7-ML-4VP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tweets" image="tabBird" selectedImage="tabBird" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="bannerView" destination="RRK-SW-Sbr" id="WN7-Ib-i07"/>
                         <outlet property="bolsoTableView" destination="jCW-X6-gdh" id="5Sm-ob-8vy"/>
                     </connections>
                 </viewController>

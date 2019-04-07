@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E5194B0222A365200F8DA66 /* JSONDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* JSONDecoding.swift */; };
+		455560E56671140BB586DA88 /* Pods_BolsonaroTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */; };
+		7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* Decoding.swift */; };
 		7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B1222A434200F8DA66 /* TweetCell.swift */; };
 		7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B3222A45AF00F8DA66 /* TweetController.swift */; };
-		7E5194B8222A56AF00F8DA66 /* mito.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E5194B7222A56AF00F8DA66 /* mito.json */; };
-		7E9D963C222A204E0000C339 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E9D963B222A204E0000C339 /* sample.json */; };
 		7E9D9640222A20B80000C339 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D963F222A20B80000C339 /* Tweet.swift */; };
 		7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED4F60D22583F9C00859B19 /* NetworkManager.swift */; };
 		7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A22228A071005CE163 /* AppDelegate.swift */; };
@@ -24,11 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E5194AF222A365200F8DA66 /* JSONDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoding.swift; sourceTree = "<group>"; };
+		1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BolsonaroTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E573539FD568AA10688027 /* Pods-BolsonaroTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BolsonaroTweets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets.debug.xcconfig"; sourceTree = "<group>"; };
+		7E5194AF222A365200F8DA66 /* Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoding.swift; sourceTree = "<group>"; };
 		7E5194B1222A434200F8DA66 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		7E5194B3222A45AF00F8DA66 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
-		7E5194B7222A56AF00F8DA66 /* mito.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mito.json; sourceTree = "<group>"; };
-		7E9D963B222A204E0000C339 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		7E9D963F222A20B80000C339 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7ED4F60D22583F9C00859B19 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7EE6799F2228A071005CE163 /* BolsonaroTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BolsonaroTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +39,7 @@
 		7EE679AE2228A072005CE163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EE679B02228A072005CE163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EEB1B88222F5B95000F4C92 /* Authentication.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Authentication.plist; sourceTree = "<group>"; };
+		E45229C23EFB56F885AF5F91 /* Pods-BolsonaroTweets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BolsonaroTweets.release.xcconfig"; path = "Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +47,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455560E56671140BB586DA88 /* Pods_BolsonaroTweets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FE6C8213B858D40CCD243A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64E573539FD568AA10688027 /* Pods-BolsonaroTweets.debug.xcconfig */,
+				E45229C23EFB56F885AF5F91 /* Pods-BolsonaroTweets.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E5194AC222A360F00F8DA66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,7 +82,7 @@
 		7E5194AE222A363600F8DA66 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
-				7E5194AF222A365200F8DA66 /* JSONDecoding.swift */,
+				7E5194AF222A365200F8DA66 /* Decoding.swift */,
 				7ED4F60D22583F9C00859B19 /* NetworkManager.swift */,
 			);
 			path = HelperFiles;
@@ -94,8 +104,6 @@
 				7EE679AB2228A072005CE163 /* Assets.xcassets */,
 				7EEB1B88222F5B95000F4C92 /* Authentication.plist */,
 				7EE679B02228A072005CE163 /* Info.plist */,
-				7E5194B7222A56AF00F8DA66 /* mito.json */,
-				7E9D963B222A204E0000C339 /* sample.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -122,6 +130,8 @@
 			children = (
 				7EE679A12228A071005CE163 /* BolsonaroTweets */,
 				7EE679A02228A071005CE163 /* Products */,
+				37FE6C8213B858D40CCD243A /* Pods */,
+				95D9CBB2CC03DAD1130307E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +157,14 @@
 			path = BolsonaroTweets;
 			sourceTree = "<group>";
 		};
+		95D9CBB2CC03DAD1130307E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,10 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE679B32228A072005CE163 /* Build configuration list for PBXNativeTarget "BolsonaroTweets" */;
 			buildPhases = (
+				E5C60888AD03E0EA5CCFA42A /* [CP] Check Pods Manifest.lock */,
 				7EE6799B2228A071005CE163 /* Sources */,
 				7EE6799C2228A071005CE163 /* Frameworks */,
 				7EE6799D2228A071005CE163 /* Resources */,
 				7ED4F60A225836ED00859B19 /* ShellScript */,
+				2F3DB71FF1820405F9052FC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,16 +229,38 @@
 			files = (
 				7EE679AF2228A072005CE163 /* LaunchScreen.storyboard in Resources */,
 				7EEB1B89222F5B95000F4C92 /* Authentication.plist in Resources */,
-				7E9D963C222A204E0000C339 /* sample.json in Resources */,
 				7EE679AC2228A072005CE163 /* Assets.xcassets in Resources */,
 				7EE679AA2228A071005CE163 /* Main.storyboard in Resources */,
-				7E5194B8222A56AF00F8DA66 /* mito.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2F3DB71FF1820405F9052FC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7ED4F60A225836ED00859B19 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +278,28 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nfi\n";
 		};
+		E5C60888AD03E0EA5CCFA42A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BolsonaroTweets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,7 +313,7 @@
 				7EE679A52228A071005CE163 /* TweetsVC.swift in Sources */,
 				7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */,
 				7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */,
-				7E5194B0222A365200F8DA66 /* JSONDecoding.swift in Sources */,
+				7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */,
 				7E9D9640222A20B80000C339 /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +458,7 @@
 		};
 		7EE679B42228A072005CE163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E573539FD568AA10688027 /* Pods-BolsonaroTweets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -412,6 +477,7 @@
 		};
 		7EE679B52228A072005CE163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E45229C23EFB56F885AF5F91 /* Pods-BolsonaroTweets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
