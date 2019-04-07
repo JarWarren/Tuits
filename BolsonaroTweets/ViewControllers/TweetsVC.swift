@@ -97,20 +97,17 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return view
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath)
-    }
-    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
-        let action1 = UIContextualAction(style: .normal, title: "Compartilhar") { (_, _, _) in
+        let action1 = UIContextualAction(style: .normal, title: "Abrir") { (_, _, _) in
+            
         }
-        let action2 = UIContextualAction(style: .normal, title: "Abrir") { (_, _, _) in
+        let action2 = UIContextualAction(style: .normal, title: "Compartilhar") { (_, _, _) in
+            
         }
         
-        action1.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        action2.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        action1.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        action2.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         return UISwipeActionsConfiguration(actions: [action1, action2])
     }
 }
