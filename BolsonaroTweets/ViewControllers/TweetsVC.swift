@@ -36,8 +36,8 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             case .failure(let error):
                 
-                let alertController = UIAlertController(title: "Network Error", message: error.localizedDescription, preferredStyle: .actionSheet)
-                let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
                 alertController.addAction(ok)
                 self.present(alertController, animated: true)
             }
@@ -82,7 +82,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.7189847827, green: 0.887085259, blue: 0.5935872197, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0.7297238708, blue: 0, alpha: 0.4381153682)
         return view
     }
     
@@ -93,17 +93,40 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.7189847827, green: 0.887085259, blue: 0.5935872197, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0.7297238708, blue: 0, alpha: 0.4381153682)
         return view
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
-        let action1 = UIContextualAction(style: .normal, title: "Abrir") { (_, _, _) in
+        guard let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
+        let tweet = cell.tweet else { return nil }
+        let tweetID =  "\(tweet.id)"
+        
+        let action1 = UIContextualAction(style: .normal, title: "Twitter") { (_, _, _) in
+            
+            let appURL = NSURL(string: "twitter://status?id=\(tweetID)")!
+            let webURL = NSURL(string: "https://twitter.com/status/\(tweetID)")!
+            
+            let application = UIApplication.shared
+            
+            if application.canOpenURL(appURL as URL) {
+                application.open(appURL as URL)
+            } else {
+                application.open(webURL as URL)
+            }
             
         }
-        let action2 = UIContextualAction(style: .normal, title: "Compartilhar") { (_, _, _) in
+        let action2 = UIContextualAction(style: .normal, title: "Share".localize) { (_, _, _) in
             
+            guard UIDevice.current.userInterfaceIdiom == .phone else { return }
+            
+            let activityItem: URL = URL(string: "https://twitter.com/jairbolsonaro/status/\(tweetID)")!
+            
+            let activityViewController: UIActivityViewController = UIActivityViewController(
+                activityItems: [activityItem], applicationActivities: nil)
+            
+            self.present(activityViewController, animated: true, completion: nil)
         }
         
         action1.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)

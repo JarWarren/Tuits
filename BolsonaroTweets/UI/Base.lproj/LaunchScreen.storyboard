@@ -18,35 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brazilLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="diz-ph-5GO">
-                                <rect key="frame" x="-84.5" y="71.5" width="544" height="544"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="diz-ph-5GO" secondAttribute="height" multiplier="1:1" id="sVU-61-R6j"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolsobg" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-SW-bSv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-qI-Evw">
-                                <rect key="frame" x="131.5" y="278" width="112.5" height="131"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-59-O87">
-                                <rect key="frame" x="94" y="250" width="187.5" height="187.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolsofg" translatesAutoresizingMaskIntoConstraints="NO" id="DbE-dl-40y">
+                                <rect key="frame" x="142.5" y="298.5" width="90" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Sbv-59-O87" secondAttribute="height" multiplier="1:1" id="xmh-FL-Jsf"/>
+                                    <constraint firstAttribute="width" secondItem="DbE-dl-40y" secondAttribute="height" multiplier="1:1" id="LYv-nt-TMm"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2882546737098361" green="0.65541894151474622" blue="0.30572999135958839" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Sbv-59-O87" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Qv-eL-lPi"/>
-                            <constraint firstItem="yhc-qI-Evw" firstAttribute="height" secondItem="Sbv-59-O87" secondAttribute="height" multiplier="0.7" id="2Cs-B0-HoO"/>
-                            <constraint firstItem="yhc-qI-Evw" firstAttribute="width" secondItem="Sbv-59-O87" secondAttribute="width" multiplier="0.6" id="34D-4x-raS"/>
-                            <constraint firstItem="diz-ph-5GO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4iN-Iu-bgY"/>
-                            <constraint firstItem="yhc-qI-Evw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="X8Z-K1-knl"/>
-                            <constraint firstItem="Sbv-59-O87" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="ZWs-ol-jbz"/>
-                            <constraint firstItem="Sbv-59-O87" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="g81-TP-kT6"/>
-                            <constraint firstItem="diz-ph-5GO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gjZ-Cw-v9S"/>
-                            <constraint firstItem="yhc-qI-Evw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i6G-qh-MZB"/>
-                            <constraint firstItem="diz-ph-5GO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1.45" id="kcA-oE-iSw"/>
+                            <constraint firstItem="DbE-dl-40y" firstAttribute="width" secondItem="pqI-SW-bSv" secondAttribute="width" multiplier="0.24" id="BBH-Fp-2YR"/>
+                            <constraint firstItem="pqI-SW-bSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DuO-Dw-hnM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pqI-SW-bSv" secondAttribute="bottom" id="ECR-7Z-1BY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pqI-SW-bSv" secondAttribute="trailing" id="OXF-ni-3Nm"/>
+                            <constraint firstItem="DbE-dl-40y" firstAttribute="centerX" secondItem="pqI-SW-bSv" secondAttribute="centerX" id="ZZz-R2-bfm"/>
+                            <constraint firstItem="DbE-dl-40y" firstAttribute="centerY" secondItem="pqI-SW-bSv" secondAttribute="centerY" id="qmE-aE-BcN"/>
+                            <constraint firstItem="pqI-SW-bSv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sVR-Kl-jqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -57,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brazilLaunch" width="1200" height="1200"/>
-        <image name="launchCircle" width="1200" height="1200"/>
+        <image name="bolsobg" width="700" height="700"/>
+        <image name="bolsofg" width="572" height="436"/>
     </resources>
 </document>

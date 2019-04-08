@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Full content of the tweet. No more than 140 characters. Followed or substituted by an image if applicable."; ObjectID = "KbS-76-Idb"; */
+"KbS-76-Idb.text" = "Full content of the tweet. No more than 140 characters. Followed or substituted by an image if applicable.";
+
+/* Class = "UILabel"; text = "@jairbolsonaro"; ObjectID = "Mmc-QD-YnL"; */
+"Mmc-QD-YnL.text" = "@jairbolsonaro";
+
+/* Class = "UILabel"; text = "Language:"; ObjectID = "XeW-zY-JxJ"; */
+"XeW-zY-JxJ.text" = "Idioma:";
+
+/* Class = "UITabBarItem"; title = "Tweets"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Tweets";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Configuações";
+
+/* Class = "UILabel"; text = "Jair M. Bolsonaro"; ObjectID = "jT5-HV-yPr"; */
+"jT5-HV-yPr.text" = "Jair M. Bolsonaro";
+
+/* Class = "UILabel"; text = "DD-Mth-YY ti:me AM"; ObjectID = "wm6-EP-sOc"; */
+"wm6-EP-sOc.text" = "DD-Mth-YY ti:me AM";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Configuações";
