@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		455560E56671140BB586DA88 /* Pods_BolsonaroTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */; };
 		7E20A2D9225AC9D0006539F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E20A2DB225AC9D0006539F5 /* Localizable.strings */; };
+		7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */; };
 		7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* Decoding.swift */; };
 		7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B1222A434200F8DA66 /* TweetCell.swift */; };
 		7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B3222A45AF00F8DA66 /* TweetController.swift */; };
@@ -29,7 +30,7 @@
 		64E573539FD568AA10688027 /* Pods-BolsonaroTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BolsonaroTweets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets.debug.xcconfig"; sourceTree = "<group>"; };
 		7E20A2DA225AC9D0006539F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E20A2DC225AC9D4006539F5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		7E20A2DE225AE92C006539F5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAdManager.swift; sourceTree = "<group>"; };
 		7E5194AF222A365200F8DA66 /* Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoding.swift; sourceTree = "<group>"; };
 		7E5194B1222A434200F8DA66 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		7E5194B3222A45AF00F8DA66 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 				7E5194AF222A365200F8DA66 /* Decoding.swift */,
 				7ED4F60D22583F9C00859B19 /* NetworkManager.swift */,
 				7ED4F60F2259C8FA00859B19 /* LocalizationManager.swift */,
+				7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,6 +330,7 @@
 				7EE679A72228A071005CE163 /* SettingsVC.swift in Sources */,
 				7ED4F6102259C8FA00859B19 /* LocalizationManager.swift in Sources */,
 				7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */,
+				7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */,
 				7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */,
 				7EE679A52228A071005CE163 /* TweetsVC.swift in Sources */,
 				7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */,
@@ -353,7 +356,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7EE679A92228A071005CE163 /* Base */,
-				7E20A2DE225AE92C006539F5 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

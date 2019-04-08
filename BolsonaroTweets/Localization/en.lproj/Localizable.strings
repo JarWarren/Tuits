@@ -18,3 +18,6 @@
 "Network Request failed." = "Network Request failed.";
 "Response returned with no data to decode." = "Response returned with no data to decode.";
 "We could not decode the response." = "We could not decode the response.";
+
+// MARK: - TabBar
+"Settings" = "Settings";
