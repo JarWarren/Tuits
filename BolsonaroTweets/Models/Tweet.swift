@@ -4,7 +4,7 @@
 //
 //  Created by Jared Warren on 3/1/19.
 //  Copyright © 2019 Warren. All rights reserved.
-//
+//  swiftlint:disable identifier_name
 
 import Foundation
 
@@ -14,13 +14,15 @@ class Tweet {
     let handle: String
     let name: String
     let text: String
+    let id: Int
     
-    init(date: String, handle: String, name: String, text: String) {
+    init(date: String, handle: String, name: String, text: String, id: Int) {
         
         self.date = date
         self.handle = handle
         self.name = name
         self.text = text
+        self.id = id
     }
     
     convenience init?(tuit: Tuit) {
@@ -29,7 +31,7 @@ class Tweet {
             let handle = tuit.user?.screen_name,
             let name = tuit.user?.name,
             let text = tuit.full_text else { return nil }
-        
-        self.init(date: String(date), handle: handle, name: name, text: text)
+        let id = tuit.id
+        self.init(date: String(date), handle: handle, name: name, text: text, id: id)
     }
 }

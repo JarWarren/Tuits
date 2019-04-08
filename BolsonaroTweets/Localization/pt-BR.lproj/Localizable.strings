@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  BolsonaroTweets
+
+  Created by Jared Warren on 4/7/19.
+  Copyright © 2019 Warren. All rights reserved.
+*/
+
+// MARK: - TweetsVC
+"Network Error" = "Erro de Rede";
+"Ok" = "Ok";
+"Share" = "Compartilhar";
+
+// MARK: - Network Manager
+"You need to be authenticated first." = "Você precisa ser autenticado primeiro.";
+"Bad request." = "Pedido inválido.";
+"The url you requested is outdated." = "A URL que você solicitou está desatualizada.";
+"Network Request failed." = "Pedido de rede falhou.";
+"Response returned with no data to decode." = "Resposta retornada sem dados para decodificar.";
+"We could not decode the response." = "Não conseguimos decodificar a resposta do servidor.";
