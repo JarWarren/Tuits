@@ -18,3 +18,6 @@
 "Network Request failed." = "Pedido de rede falhou.";
 "Response returned with no data to decode." = "Resposta retornada sem dados para decodificar.";
 "We could not decode the response." = "Não conseguimos decodificar a resposta do servidor.";
+
+// MARK: - TabBar
+"Settings" = "Configurações";

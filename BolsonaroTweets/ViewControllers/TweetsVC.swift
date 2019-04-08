@@ -21,6 +21,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         bolsoTableView.delegate = self
         bolsoTableView.dataSource = self
+        tabBarController?.tabBar.items?[1].title = "Settings".localize
         TweetController.fetchTweets { (result) in
             
             switch result {
@@ -47,13 +48,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let request = DFPRequest()
-        request.testDevices = ["1e6e76e8d8c1f2588d47e3515fda0a76"]
-        
-        bannerView.adUnitID = "/6499/example/banner"
-        bannerView.rootViewController = self
-        bannerView.load(request)
-        bannerView.adSize = kGADAdSizeBanner
+        AdManager.displayBannerAds(on: bannerView, for: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
