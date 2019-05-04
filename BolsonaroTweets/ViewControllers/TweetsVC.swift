@@ -61,7 +61,6 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath)
-        
         if let cell = cell as? TweetCell {
             
             cell.tweet = tweets[indexPath.section]
@@ -70,27 +69,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
-        let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0, green: 0.7297238708, blue: 0, alpha: 0.4381153682)
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0, green: 0.7297238708, blue: 0, alpha: 0.4381153682)
-        return view
-    }
+    // TODO: Remove headers and footers. I only have one section. Just add a border and corner radius to each cell in cellForRowAt.
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
@@ -98,7 +77,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let tweet = cell.tweet else { return nil }
         let tweetID =  "\(tweet.id)"
         
-        let action1 = UIContextualAction(style: .normal, title: "Twitter") { (_, _, _) in
+        let action1 = UIContextualAction(style: .normal, title: nil) { (_, _, _) in
             
             let appURL = NSURL(string: "twitter://status?id=\(tweetID)")!
             let webURL = NSURL(string: "https://twitter.com/status/\(tweetID)")!
@@ -112,20 +91,21 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
         }
-        let action2 = UIContextualAction(style: .normal, title: "Share".localize) { (_, _, _) in
+        let action2 = UIContextualAction(style: .normal, title: nil) { (_, _, _) in
             
             guard UIDevice.current.userInterfaceIdiom == .phone else { return }
             
             let activityItem: URL = URL(string: "https://twitter.com/jairbolsonaro/status/\(tweetID)")!
             
-            let activityViewController: UIActivityViewController = UIActivityViewController(
-                activityItems: [activityItem], applicationActivities: nil)
+            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [activityItem], applicationActivities: nil)
             
             self.present(activityViewController, animated: true, completion: nil)
         }
         
-        action1.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        action2.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        return UISwipeActionsConfiguration(actions: [action1, action2])
+        action1.backgroundColor = #colorLiteral(red: 0.1143526807, green: 0.6294203997, blue: 0.9512725472, alpha: 1)
+        action1.image = #imageLiteral(resourceName: "twitter")
+        action2.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        action2.image = #imageLiteral(resourceName: "share")
+        return UISwipeActionsConfiguration(actions: [action2, action1])
     }
 }
