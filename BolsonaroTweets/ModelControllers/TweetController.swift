@@ -6,7 +6,7 @@
 //  Copyright © 2019 Warren. All rights reserved.
 //  swiftlint:disable line_length
 
-import Foundation
+import UIKit
 
 class TweetController: NetworkManager {
     
@@ -23,11 +23,7 @@ class TweetController: NetworkManager {
         
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let error = error {
-                
-                completion(.failure(error))
-                return
-            }
+            if let error = error { completion(.failure(error)); return }
             
             if let response = response as? HTTPURLResponse {
                 let result = handleNetworkResponse(response)
@@ -66,6 +62,37 @@ class TweetController: NetworkManager {
             }
         }
         dataTask.resume()
+    }
+    
+    static func fetchImageAt(url: String, completion: @escaping (Result <UIImage, Error>) -> Void) {
+        
+        guard let imageUrl = URL(string: url) else { completion(.failure(NetworkResponse.failed)); return }
+        
+        print("\n\n\(imageUrl)\n\n")
+        
+        var request = URLRequest(url: imageUrl)
+        request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error { completion(.failure(error)); return }
+            
+            if let httpURLResponse = response as? HTTPURLResponse {
+                let result = handleNetworkResponse(httpURLResponse)
+                
+                switch result {
+                    
+                case .success:
+                    guard let imageData = data,
+                        let image = UIImage(data: imageData) else { completion(.failure(NetworkResponse.noData)); return }
+                    completion(.success(image))
+                    
+                case .failure( let error):
+                    completion(.failure(error))
+                    return
+                }
+            }
+            }.resume()
     }
     
     // MARK: - Authentication
