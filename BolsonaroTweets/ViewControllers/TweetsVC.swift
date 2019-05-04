@@ -71,8 +71,6 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    // TODO: Remove headers and footers. I only have one section. Just add a border and corner radius to each cell in cellForRowAt.
-    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
         guard let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
