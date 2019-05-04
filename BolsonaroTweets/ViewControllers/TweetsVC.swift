@@ -21,6 +21,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         bolsoTableView.delegate = self
         bolsoTableView.dataSource = self
+        bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "bolsobg"))
         tabBarController?.tabBar.items?[1].title = "Settings".localize
         TweetController.fetchTweets { (result) in
             
@@ -49,6 +50,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewWillAppear(animated)
         
         AdManager.displayBannerAds(on: bannerView, for: self)
+        bolsoTableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

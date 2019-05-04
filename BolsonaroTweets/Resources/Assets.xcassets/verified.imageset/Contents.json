@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "profPic.jpg",
+      "filename" : "verified.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "profPic@2x.jpeg",
+      "filename" : "verified@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "profPic@3x.jpeg",
+      "filename" : "verified@3x.png",
       "scale" : "3x"
     }
   ],
