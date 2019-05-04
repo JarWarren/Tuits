@@ -21,10 +21,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCW-X6-gdh">
                                 <rect key="frame" x="0.0" y="20" width="375" height="548"/>
-                                <color key="backgroundColor" red="0.40749692916870117" green="0.88074827194213867" blue="0.2703971266746521" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" red="0.40749692920000002" green="0.88074827190000005" blue="0.27039712669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.26253250241279602" green="0.5766945481300354" blue="0.18027693033218384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.26306242936160917" green="0.57669528966649741" blue="0.17971431646827324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="0.40749692920000002" green="0.88074827190000005" blue="0.27039712669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.26253250241279602" green="0.5766945481300354" blue="0.18027693033218384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bolCell" rowHeight="226" id="6z2-Ka-tdm" customClass="TweetCell" customModule="BolsonaroTweets" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
@@ -43,34 +43,34 @@
                                                                 <constraint firstAttribute="width" constant="36" id="PTz-uc-1Jp"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
-                                                            <rect key="frame" x="48" y="0.0" width="105" height="36"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
+                                                            <rect key="frame" x="48" y="0.0" width="109" height="36"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jair M. Bolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-HV-yPr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="14.5"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="109" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@jairbolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-QD-YnL">
-                                                                    <rect key="frame" x="0.0" y="14.5" width="105" height="21.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@jairbolsonaro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-QD-YnL">
+                                                                    <rect key="frame" x="0.0" y="2" width="109" height="34"/>
+                                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD-Mth-YY ti:me AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-EP-sOc">
-                                                            <rect key="frame" x="165" y="0.0" width="180" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <rect key="frame" x="169" y="0.0" width="176" height="36"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full content of the tweet. No more than 140 characters. Followed or substituted by an image if applicable." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbS-76-Idb">
-                                                    <rect key="frame" x="15" y="47" width="345" height="168"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="55" width="345" height="160"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -80,7 +80,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="KbS-76-Idb" secondAttribute="bottom" id="IWm-Xp-Xwu"/>
                                                 <constraint firstItem="KbS-76-Idb" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leadingMargin" id="gTL-0k-MtK"/>
                                                 <constraint firstItem="ejB-W3-5o9" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leadingMargin" id="jaf-xT-hMr"/>
-                                                <constraint firstItem="KbS-76-Idb" firstAttribute="top" secondItem="ejB-W3-5o9" secondAttribute="bottom" id="jlE-XH-sTe"/>
+                                                <constraint firstItem="KbS-76-Idb" firstAttribute="top" secondItem="ejB-W3-5o9" secondAttribute="bottom" constant="8" id="jlE-XH-sTe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KbS-76-Idb" secondAttribute="trailing" id="nol-Gi-dDa"/>
                                                 <constraint firstItem="ejB-W3-5o9" firstAttribute="top" secondItem="ROb-tx-RR8" secondAttribute="topMargin" id="pA7-nw-6lB"/>
                                             </constraints>
@@ -103,7 +103,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97647076845169067" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jCW-X6-gdh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="7Cx-zi-f2S"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="RRK-SW-Sbr" secondAttribute="bottom" id="7no-g4-z7L"/>
@@ -133,9 +133,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="124" y="20" width="127.5" height="43"/>
+                                <rect key="frame" x="116.5" y="20" width="142.5" height="40.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -148,16 +148,16 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Rj-fX-Vuf">
-                                <rect key="frame" x="75" y="75" width="225.5" height="80"/>
+                                <rect key="frame" x="71.5" y="72.5" width="232.5" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-zY-JxJ">
-                                        <rect key="frame" x="0.0" y="30" width="137.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="30" width="144.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-EL-uLB">
-                                        <rect key="frame" x="145.5" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="152.5" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EPQ-EL-uLB" secondAttribute="height" multiplier="1:1" id="FHY-Zy-hil"/>
                                             <constraint firstAttribute="width" constant="80" id="SxB-69-uGa"/>
@@ -169,10 +169,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T32-rA-TTa">
+                                <rect key="frame" x="0.0" y="568" width="27.5" height="50"/>
+                                <color key="backgroundColor" red="0.97647076845169067" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fuf-MJ-p21"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxo-6T-0Am">
+                                <rect key="frame" x="347.5" y="568" width="27.5" height="50"/>
+                                <color key="backgroundColor" red="0.97647076845169067" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Wt-qb-TE8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Vxo-6T-0Am" firstAttribute="leading" secondItem="nMK-hw-fna" secondAttribute="trailing" id="4Um-aG-CPL"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Vxo-6T-0Am" secondAttribute="trailing" id="5Wr-Jt-16p"/>
                             <constraint firstItem="0Rj-fX-Vuf" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="12" id="9hV-Vq-tCu"/>
+                            <constraint firstItem="T32-rA-TTa" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="Dyt-aD-D1F"/>
+                            <constraint firstItem="Vxo-6T-0Am" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="HgS-cx-Jgt"/>
+                            <constraint firstItem="nMK-hw-fna" firstAttribute="leading" secondItem="T32-rA-TTa" secondAttribute="trailing" id="Lku-RP-EiY"/>
+                            <constraint firstItem="T32-rA-TTa" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="lW1-hV-NdJ"/>
                             <constraint firstItem="nMK-hw-fna" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="pN0-Yl-djz"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="rvA-il-oY6"/>
@@ -191,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="555"/>
+            <point key="canvasLocation" x="484" y="554.57271364317842"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -201,7 +221,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.28825467370000002" green="0.65541894150000002" blue="0.30572999140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.26253250241279602" green="0.5766945481300354" blue="0.18027693033218384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
