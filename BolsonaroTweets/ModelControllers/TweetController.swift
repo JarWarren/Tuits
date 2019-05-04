@@ -16,6 +16,8 @@ class TweetController: NetworkManager {
         
         guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended&include_rts=false") else { completion(.failure(NetworkResponse.failed)); return }
         
+        print("\n\n\(baseURL)\n\n")
+        
         var request = URLRequest(url: baseURL)
         request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
         

@@ -14,6 +14,12 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        profilePic.layer.cornerRadius = profilePic.frame.width / 2
+    }
     
     var tweet: Tweet? {
         didSet {
@@ -29,7 +35,7 @@ class TweetCell: UITableViewCell {
         
         nameLabel.text = name
         handleLabel.text = "@" + handle
-        dateLabel.text = date
+        dateLabel.text = date.asLocalizedDate
         tweetTextLabel.text = text
     }
 }
