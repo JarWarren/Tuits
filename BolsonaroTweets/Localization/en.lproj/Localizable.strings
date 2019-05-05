@@ -21,3 +21,6 @@
 
 // MARK: - TabBar
 "Settings" = "Settings";
+
+// MARK: - Cells
+"Retweeted" = "Jair M. Bolsonaro Retweeted";
