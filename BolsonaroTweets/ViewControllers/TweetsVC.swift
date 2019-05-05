@@ -65,6 +65,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath)
         if let cell = cell as? TweetCell {
             
+            cell.imageViewButton.setBackgroundImage(nil, for: .normal)
             cell.tweet = tweets[indexPath.section]
         }
         

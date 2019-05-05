@@ -10,11 +10,11 @@ import UIKit
 
 class TweetController: NetworkManager {
     
-    // MARK: - GET Request
-    
     static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended&include_rts=false") else { completion(.failure(NetworkResponse.failed)); return }
+        let retweets = SettingsController.shared.allSettings["Retweets"] ?? false
+        
+        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended&include_rts=\(retweets)") else { completion(.failure(NetworkResponse.failed)); return }
         
         print("\n\n\(baseURL)\n\n")
         

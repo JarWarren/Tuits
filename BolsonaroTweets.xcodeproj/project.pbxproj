@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		455560E56671140BB586DA88 /* Pods_BolsonaroTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */; };
 		7E0E9352227DFF700099DE14 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E9351227DFF700099DE14 /* StringExtension.swift */; };
+		7E205F82227E63C500483125 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F81227E63C500483125 /* SettingsController.swift */; };
 		7E20A2D9225AC9D0006539F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E20A2DB225AC9D0006539F5 /* Localizable.strings */; };
 		7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */; };
 		7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* Decoding.swift */; };
@@ -30,6 +31,7 @@
 		1B4B7B4E04DE9C56FD7C6E23 /* Pods_BolsonaroTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BolsonaroTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E573539FD568AA10688027 /* Pods-BolsonaroTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BolsonaroTweets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BolsonaroTweets/Pods-BolsonaroTweets.debug.xcconfig"; sourceTree = "<group>"; };
 		7E0E9351227DFF700099DE14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7E205F81227E63C500483125 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		7E20A2DA225AC9D0006539F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E20A2DC225AC9D4006539F5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAdManager.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 				7E0E9351227DFF700099DE14 /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E205F80227E63B800483125 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7E205F81227E63C500483125 /* SettingsController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		7E20A2D3225AC8A8006539F5 /* Localization */ = {
@@ -181,6 +191,7 @@
 				7E5194AE222A363600F8DA66 /* Utilities */,
 				7E0E9350227DFF5D0099DE14 /* Extensions */,
 				7E20A2D3225AC8A8006539F5 /* Localization */,
+				7E205F80227E63B800483125 /* Settings */,
 				7E9D963A222A20310000C339 /* Resources */,
 			);
 			path = BolsonaroTweets;
@@ -338,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E205F82227E63C500483125 /* SettingsController.swift in Sources */,
 				7EE679A72228A071005CE163 /* SettingsVC.swift in Sources */,
 				7ED4F6102259C8FA00859B19 /* LocalizationManager.swift in Sources */,
 				7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */,
