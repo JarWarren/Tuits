@@ -21,7 +21,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         bolsoTableView.delegate = self
         bolsoTableView.dataSource = self
-        bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "bolsobg"))
+        bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "tableViewBG"))
         tabBarController?.tabBar.items?[1].title = "Settings".localize
         TweetController.fetchTweets { (result) in
             
@@ -53,23 +53,32 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         bolsoTableView.reloadData()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bolCell", for: indexPath)
-        if let cell = cell as? TweetCell {
-            
-            cell.imageViewButton.setBackgroundImage(nil, for: .normal)
-            cell.tweet = tweets[indexPath.section]
-        }
         
-        return cell
+        let tweet = tweets[indexPath.row]
+        
+        switch tweet.tweetType {
+            
+        case .original:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
+            cell.tweetImageView.image = nil
+            cell.tweet = tweet
+            return cell
+            
+        case .retweet:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "retweetCell", for: indexPath) as? RetweetCell else { return UITableViewCell() }
+            cell.tweetImageView.image = nil
+            cell.tweet = tweet
+            return cell
+            
+        case .quote:
+            break
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
