@@ -1,21 +1,22 @@
 //
-//  TweetCell.swift
+//  RetweetCell.swift
 //  BolsonaroTweets
 //
-//  Created by Jared Warren on 3/1/19.
+//  Created by Jared Warren on 5/4/19.
 //  Copyright © 2019 Warren. All rights reserved.
 //
 
 import UIKit
 
-class TweetCell: UITableViewCell {
-    
+class RetweetCell: UITableViewCell {
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var tweetImageView: UIImageView!
+    @IBOutlet weak var retweetLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,8 @@ class TweetCell: UITableViewCell {
     }
     
     func updateCell() {
+        
+        retweetLabel.text = "Retweeted".localize
         
         guard let name = tweet?.name,
             let handle = tweet?.handle,

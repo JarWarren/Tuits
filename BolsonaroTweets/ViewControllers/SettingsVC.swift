@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var retweetLabel: UILabel!
+    @IBOutlet weak var retweetSwitch: UISwitch!
     @IBOutlet weak var bannerView: DFPBannerView!
     
     override func viewDidLoad() {
@@ -25,6 +27,8 @@ class SecondViewController: UIViewController {
         default:
             definirParaOPortugues()
         }
+        
+        retweetSwitch.isOn = SettingsController.shared.allSettings["Retweets"] ?? false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,12 +50,18 @@ class SecondViewController: UIViewController {
         LocalizationManager.shared.saveLanguage()
     }
     
+    @IBAction func retweetSwitchSwitched(_ sender: UISwitch) {
+        
+        SettingsController.shared.shouldIncludeRetweets(bool: sender.isOn)
+    }
+    
     func setToEnglish() {
         
         LocalizationManager.shared.setToEnglish()
         languageButton.setImage(#imageLiteral(resourceName: "en"), for: .normal)
         settingsLabel.text = "Settings"
         languageLabel.text = "Current language:"
+        retweetLabel.text = "Include Retweets:"
         tabBarController?.tabBar.items?[1].title = "Settings"
     }
     
@@ -61,6 +71,7 @@ class SecondViewController: UIViewController {
         languageButton.setImage(#imageLiteral(resourceName: "pt"), for: .normal)
         settingsLabel.text = "Configurações"
         languageLabel.text = "Idioma atual:"
+        retweetLabel.text = "Incluir Retweets:"
         tabBarController?.tabBar.items?[1].title = "Configurações"
     }
 }

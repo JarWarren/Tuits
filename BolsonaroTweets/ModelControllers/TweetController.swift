@@ -6,26 +6,24 @@
 //  Copyright © 2019 Warren. All rights reserved.
 //  swiftlint:disable line_length
 
-import Foundation
+import UIKit
 
 class TweetController: NetworkManager {
     
-    // MARK: - GET Request
-    
     static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended&include_rts=false") else { completion(.failure(NetworkResponse.failed)); return }
+        let retweets = SettingsController.shared.allSettings["Retweets"] ?? false
+        
+        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=24&tweet_mode=extended&include_rts=\(retweets)") else { completion(.failure(NetworkResponse.failed)); return }
+        
+        print("\n\n\(baseURL)\n\n")
         
         var request = URLRequest(url: baseURL)
         request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
         
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let error = error {
-                
-                completion(.failure(error))
-                return
-            }
+            if let error = error { completion(.failure(error)); return }
             
             if let response = response as? HTTPURLResponse {
                 let result = handleNetworkResponse(response)
@@ -64,6 +62,37 @@ class TweetController: NetworkManager {
             }
         }
         dataTask.resume()
+    }
+    
+    static func fetchImageAt(url: String, completion: @escaping (Result <UIImage, Error>) -> Void) {
+        
+        guard let imageUrl = URL(string: url) else { completion(.failure(NetworkResponse.failed)); return }
+        
+        print("\n\n\(imageUrl)\n\n")
+        
+        var request = URLRequest(url: imageUrl)
+        request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error { completion(.failure(error)); return }
+            
+            if let httpURLResponse = response as? HTTPURLResponse {
+                let result = handleNetworkResponse(httpURLResponse)
+                
+                switch result {
+                    
+                case .success:
+                    guard let imageData = data,
+                        let image = UIImage(data: imageData) else { completion(.failure(NetworkResponse.noData)); return }
+                    completion(.success(image))
+                    
+                case .failure( let error):
+                    completion(.failure(error))
+                    return
+                }
+            }
+            }.resume()
     }
     
     // MARK: - Authentication

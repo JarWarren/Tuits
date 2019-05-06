@@ -1,21 +1,20 @@
 //
-//  TweetCell.swift
+//  QuoteCell.swift
 //  BolsonaroTweets
 //
-//  Created by Jared Warren on 3/1/19.
+//  Created by Jared Warren on 5/4/19.
 //  Copyright © 2019 Warren. All rights reserved.
 //
 
 import UIKit
 
-class TweetCell: UITableViewCell {
-    
+class QuoteCell: UITableViewCell {
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var tweetImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,17 +51,6 @@ class TweetCell: UITableViewCell {
             }
         }
         
-        guard let firstMediaURL = tweet?.mediaURLs.first else { return }
-        tweetImageView.image = #imageLiteral(resourceName: "tabBird")
-        TweetController.fetchImageAt(url: firstMediaURL) { (result) in
-            switch result {
-            case .success(let image):
-                DispatchQueue.main.async {
-                    self.tweetImageView.image = image
-                    self.layoutIfNeeded()
-                }
-            case .failure: break
-            }
-        }
+        // TODO: Unwrap quote object and fetch quote profilepic
     }
 }
