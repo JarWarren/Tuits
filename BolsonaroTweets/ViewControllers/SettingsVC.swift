@@ -16,7 +16,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var retweetLabel: UILabel!
     @IBOutlet weak var retweetSwitch: UISwitch!
+    @IBOutlet weak var replyLabel: UILabel!
+    @IBOutlet weak var replySwitch: UISwitch!
     @IBOutlet weak var bannerView: DFPBannerView!
+    
+    weak var delegate: SettingsVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,7 @@ class SecondViewController: UIViewController {
         }
         
         retweetSwitch.isOn = SettingsController.shared.allSettings["Retweets"] ?? false
+        replySwitch.isOn = SettingsController.shared.allSettings["Replies"] ?? false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +58,13 @@ class SecondViewController: UIViewController {
     @IBAction func retweetSwitchSwitched(_ sender: UISwitch) {
         
         SettingsController.shared.shouldIncludeRetweets(bool: sender.isOn)
+        delegate?.fetchTweets()
+    }
+    
+    @IBAction func replySwitchSwitched(_ sender: UISwitch) {
+
+        SettingsController.shared.shouldExcludeReplies(bool: sender.isOn)
+        delegate?.fetchTweets()
     }
     
     func setToEnglish() {
@@ -61,7 +73,8 @@ class SecondViewController: UIViewController {
         languageButton.setImage(#imageLiteral(resourceName: "en"), for: .normal)
         settingsLabel.text = "Settings"
         languageLabel.text = "Current language:"
-        retweetLabel.text = "Include Retweets:"
+        retweetLabel.text = "Include retweets:"
+        replyLabel.text = "Include replies:"
         tabBarController?.tabBar.items?[1].title = "Settings"
     }
     
@@ -71,7 +84,13 @@ class SecondViewController: UIViewController {
         languageButton.setImage(#imageLiteral(resourceName: "pt"), for: .normal)
         settingsLabel.text = "Configurações"
         languageLabel.text = "Idioma atual:"
-        retweetLabel.text = "Incluir Retweets:"
+        retweetLabel.text = "Incluir retweets:"
+        replyLabel.text = "Incluir respostas:"
         tabBarController?.tabBar.items?[1].title = "Configurações"
     }
+}
+
+protocol SettingsVCDelegate: class {
+    
+    func fetchTweets()
 }

@@ -16,6 +16,7 @@ struct Tuit: Decodable {
     let id: Int
     let retweeted: Bool
     let retweeted_status: Retuit?
+    let quoted_status: Quote?
     let extended_entities: Entity?
 }
 
@@ -48,9 +49,15 @@ struct User: Decodable {
 
 // RETWEET
 struct Retuit: Decodable {
-    
     let full_text: String?
     let created_at: String?
     let user: User?
     let extended_entities: Entity?
+}
+
+// QUOTE
+struct Quote: Decodable {
+    let full_text: String?
+    let created_at: String?
+    let user: User?
 }

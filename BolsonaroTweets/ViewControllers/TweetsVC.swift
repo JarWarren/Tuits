@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SettingsVCDelegate {
 
     @IBOutlet weak var bolsoTableView: UITableView!
     @IBOutlet weak var bannerView: DFPBannerView!
@@ -23,26 +23,9 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         bolsoTableView.dataSource = self
         bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "tableViewBG"))
         tabBarController?.tabBar.items?[1].title = "Settings".localize
-        TweetController.fetchTweets { (result) in
-            
-            switch result {
-                
-            case .success(let tweets):
-                
-                self.tweets = tweets
-                
-                DispatchQueue.main.async {
-                    
-                    self.bolsoTableView.reloadData()
-                }
-                
-            case .failure(let error):
-                
-                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
-                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
-                alertController.addAction(ok)
-                self.present(alertController, animated: true)
-            }
+        fetchTweets()
+        if let settingsVC = tabBarController?.viewControllers?[1] as? SecondViewController {
+            settingsVC.delegate = self
         }
     }
     
@@ -61,7 +44,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let tweet = tweets[indexPath.row]
         
-        switch tweet.tweetType {
+        switch tweet.type {
             
         case .original:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
@@ -76,7 +59,11 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return cell
             
         case .quote:
-            break
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuoteCell else { return UITableViewCell() }
+            cell.tweet = tweet
+            return cell
+            
+        default: break
         }
         return UITableViewCell()
     }
@@ -117,5 +104,29 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         action2.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         action2.image = #imageLiteral(resourceName: "share")
         return UISwipeActionsConfiguration(actions: [action2, action1])
+    }
+    
+    func fetchTweets() {
+        TweetController.fetchTweets { (result) in
+            
+            switch result {
+                
+            case .success(let tweets):
+                
+                self.tweets = tweets
+                
+                DispatchQueue.main.async {
+                    
+                    self.bolsoTableView.reloadData()
+                }
+                
+            case .failure(let error):
+                
+                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
+                alertController.addAction(ok)
+                self.present(alertController, animated: true)
+            }
+        }
     }
 }

@@ -15,12 +15,18 @@ class SettingsController {
         if let settings = loadSettings() {
             return settings
         } else {
-            return ["Retweets": false]
+            return ["Retweets": false,
+                    "Replies": false]
         }
     }()
     
     func shouldIncludeRetweets(bool: Bool) {
         allSettings["Retweets"] = bool
+        saveSettings()
+    }
+    
+    func shouldExcludeReplies(bool: Bool) {
+        allSettings["Replies"] = bool
         saveSettings()
     }
     
