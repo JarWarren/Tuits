@@ -10,15 +10,47 @@ import UIKit
 
 class QuoteCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var handleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        profilePic.layer.cornerRadius = profilePic.frame.width / 2
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    var tweet: Tweet? {
+        didSet {
+            updateCell()
+        }
     }
-
+    
+    func updateCell() {
+        
+        guard let name = tweet?.name,
+            let handle = tweet?.handle,
+            let date = tweet?.date,
+            let text = tweet?.text else { return }
+        
+        nameLabel.text = name
+        handleLabel.text = "@" + handle
+        dateLabel.text = date.asLocalizedDate
+        tweetTextLabel.attributedText = text.tweetFormatted
+        
+        guard let profilePicURL = tweet?.profilePicURL else { return }
+        
+        TweetController.fetchImageAt(url: profilePicURL) { (result) in
+            switch result {
+            case .success(let profilePicture):
+                DispatchQueue.main.async {
+                    self.profilePic.image = profilePicture
+                }
+            case .failure: break
+            }
+        }
+        
+        // TODO: Unwrap quote object and fetch quote profilepic
+    }
 }
