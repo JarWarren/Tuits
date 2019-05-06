@@ -19,7 +19,6 @@ class TweetCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        profilePic.layer.cornerRadius = profilePic.frame.width / 2
     }
     
     var tweet: Tweet? {
@@ -51,7 +50,7 @@ class TweetCell: UITableViewCell {
             case .failure: break
             }
         }
-        
+        /*
         guard let firstMediaURL = tweet?.mediaURLs.first else { return }
         tweetImageView.image = #imageLiteral(resourceName: "tabBird")
         TweetController.fetchImageAt(url: firstMediaURL) { (result) in
@@ -64,5 +63,6 @@ class TweetCell: UITableViewCell {
             case .failure: break
             }
         }
+        */
     }
 }

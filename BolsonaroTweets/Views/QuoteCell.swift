@@ -9,16 +9,25 @@
 import UIKit
 
 class QuoteCell: UITableViewCell {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var quoteView: UIView!
+    @IBOutlet weak var quoteProfilePic: UIImageView!
+    @IBOutlet weak var quoteName: UILabel!
+    @IBOutlet weak var quoteHandle: UILabel!
+    @IBOutlet weak var quoteDate: UILabel!
+    @IBOutlet weak var quoteText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePic.layer.cornerRadius = profilePic.frame.width / 2
+        quoteView.layer.cornerRadius = 6
+        quoteView.layer.borderColor = UIColor.lightGray.cgColor
+        quoteView.layer.borderWidth = 1
     }
     
     var tweet: Tweet? {
@@ -51,6 +60,26 @@ class QuoteCell: UITableViewCell {
             }
         }
         
-        // TODO: Unwrap quote object and fetch quote profilepic
+        guard let qName = tweet?.quote?.name,
+            let qHandle = tweet?.quote?.handle,
+            let qDate = tweet?.quote?.date,
+            let qText = tweet?.quote?.text else { return }
+        
+        quoteName.text = qName
+        quoteHandle.text = qHandle
+        quoteDate.text = qDate.asLocalizedDate
+        quoteText.attributedText = qText.tweetFormatted
+        
+        guard let qPicURL = tweet?.quote?.imageURL else { return }
+        
+        TweetController.fetchImageAt(url: qPicURL) { (result) in
+            switch result {
+            case .success(let quotePic):
+                DispatchQueue.main.async {
+                    self.quoteProfilePic.image = quotePic
+                }
+            case .failure: break
+            }
+        }
     }
 }

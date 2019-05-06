@@ -54,7 +54,7 @@ class RetweetCell: UITableViewCell {
             case .failure: break
             }
         }
-        
+        /*
         guard let firstMediaURL = tweet?.mediaURLs.first else { return }
         tweetImageView.image = #imageLiteral(resourceName: "tabBird")
         TweetController.fetchImageAt(url: firstMediaURL) { (result) in
@@ -67,5 +67,6 @@ class RetweetCell: UITableViewCell {
             case .failure: break
             }
         }
+        */
     }
 }
