@@ -38,7 +38,7 @@ class TweetCell: UITableViewCell {
         nameLabel.text = name
         handleLabel.text = "@" + handle
         dateLabel.text = date.asLocalizedDate
-        tweetTextLabel.text = text
+        tweetTextLabel.attributedText = text.tweetFormatted
         
         guard let profilePicURL = tweet?.profilePicURL else { return }
         

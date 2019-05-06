@@ -6,7 +6,7 @@
 //  Copyright © 2019 Warren. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     
@@ -53,5 +53,36 @@ extension String {
             }
         }
         return localizedDate
+    }
+    
+    var tweetFormatted: NSMutableAttributedString {
+        
+        var newSelf = self
+        
+        let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        var range = NSRange(location: 0, length: newSelf.utf16.count)
+        
+        if let matches = detector?.matches(in: newSelf, options: [], range: range) {
+            
+            for match in matches {
+                guard let range = Range(match.range, in: newSelf) else { continue }
+                let url = newSelf[range]
+                newSelf = newSelf.replacingOccurrences(of: url, with: "")
+            }
+        }
+        
+        let searchPattern = "(^|[^@\\w])@(\\w{1,15})\\b"
+        
+        let attributed = NSMutableAttributedString(string: newSelf)
+        
+        let regex = try? NSRegularExpression(pattern: searchPattern, options: [.caseInsensitive])
+        
+        range = NSRange(location: 0, length: attributed.string.utf16.count)
+        
+        for match in regex?.matches(in: attributed.string, options: [], range: range) ?? [] {
+            attributed.addAttribute(.foregroundColor, value: #colorLiteral(red: 0.1136763319, green: 0.7917308211, blue: 0.9969540238, alpha: 1), range: match.range)
+        }
+        
+        return attributed
     }
 }
