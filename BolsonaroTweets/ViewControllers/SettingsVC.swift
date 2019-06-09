@@ -12,7 +12,6 @@ import GoogleMobileAds
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var settingsLabel: UILabel!
-    @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var retweetLabel: UILabel!
     @IBOutlet weak var retweetSwitch: UISwitch!
@@ -39,7 +38,7 @@ class SecondViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        AdManager.displayBannerAds(on: bannerView, for: self)
+        AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab2")
     }
 
     @IBAction func languageButtonTapped(_ sender: UIButton) {
@@ -72,7 +71,6 @@ class SecondViewController: UIViewController {
         LocalizationManager.shared.setToEnglish()
         languageButton.setImage(#imageLiteral(resourceName: "en"), for: .normal)
         settingsLabel.text = "Settings"
-        languageLabel.text = "Current language:"
         retweetLabel.text = "Include retweets:"
         replyLabel.text = "Include replies:"
         tabBarController?.tabBar.items?[1].title = "Settings"
@@ -83,7 +81,6 @@ class SecondViewController: UIViewController {
         LocalizationManager.shared.definirParaOPortuguês()
         languageButton.setImage(#imageLiteral(resourceName: "pt"), for: .normal)
         settingsLabel.text = "Configurações"
-        languageLabel.text = "Idioma atual:"
         retweetLabel.text = "Incluir retweets:"
         replyLabel.text = "Incluir respostas:"
         tabBarController?.tabBar.items?[1].title = "Configurações"
