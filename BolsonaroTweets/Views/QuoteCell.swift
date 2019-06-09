@@ -25,9 +25,9 @@ class QuoteCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePic.layer.cornerRadius = profilePic.frame.width / 2
-        quoteView.layer.cornerRadius = 6
-        quoteView.layer.borderColor = UIColor.lightGray.cgColor
-        quoteView.layer.borderWidth = 1
+        quoteView.layer.shadowColor = UIColor.lightGray.cgColor
+        quoteView.layer.shadowRadius = 6
+        quoteView.layer.shadowOpacity = 1
     }
     
     var tweet: Tweet? {
@@ -66,7 +66,7 @@ class QuoteCell: UITableViewCell {
             let qText = tweet?.quote?.text else { return }
         
         quoteName.text = qName
-        quoteHandle.text = qHandle
+        quoteHandle.text = "@" + qHandle
         quoteDate.text = qDate.asLocalizedDate
         quoteText.attributedText = qText.tweetFormatted
         

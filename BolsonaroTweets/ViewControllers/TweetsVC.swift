@@ -32,7 +32,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Se
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        AdManager.displayBannerAds(on: bannerView, for: self)
+        AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab1")
         bolsoTableView.reloadData()
     }
     
@@ -70,8 +70,46 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Se
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
-        guard let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
-        let tweet = cell.tweet else { return nil }
+        if let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else if let cell = tableView.cellForRow(at: indexPath) as? RetweetCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else if let cell = tableView.cellForRow(at: indexPath) as? QuoteCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else {
+            return nil
+        }
+    }
+    
+    func fetchTweets() {
+        TweetController.fetchTweets { (result) in
+            
+            switch result {
+                
+            case .success(let tweets):
+                
+                self.tweets = tweets
+                
+                DispatchQueue.main.async {
+                    
+                    self.bolsoTableView.reloadData()
+                }
+                
+            case .failure(let error):
+                
+                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
+                alertController.addAction(ok)
+                self.present(alertController, animated: true)
+            }
+        }
+    }
+    
+    func actionsFor(_ tweet: Tweet) -> UISwipeActionsConfiguration {
+        
         let tweetID =  "\(tweet.id)"
         
         let action1 = UIContextualAction(style: .normal, title: nil) { (_, _, _) in
@@ -104,29 +142,5 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Se
         action2.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         action2.image = #imageLiteral(resourceName: "share")
         return UISwipeActionsConfiguration(actions: [action2, action1])
-    }
-    
-    func fetchTweets() {
-        TweetController.fetchTweets { (result) in
-            
-            switch result {
-                
-            case .success(let tweets):
-                
-                self.tweets = tweets
-                
-                DispatchQueue.main.async {
-                    
-                    self.bolsoTableView.reloadData()
-                }
-                
-            case .failure(let error):
-                
-                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
-                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
-                alertController.addAction(ok)
-                self.present(alertController, animated: true)
-            }
-        }
     }
 }

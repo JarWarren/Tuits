@@ -26,7 +26,7 @@
                                 <color key="separatorColor" red="0.26306242936160917" green="0.57669528966649741" blue="0.17971431646827324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="4oh-01-h2u">
-                                    <rect key="frame" x="0.0" y="800" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="887" width="375" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
@@ -100,12 +100,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSM-wh-yOK">
-                                                    <rect key="frame" x="0.0" y="122" width="375" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="134" width="375" height="87.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ejB-W3-5o9" secondAttribute="trailing" id="0lP-Nv-mnc"/>
-                                                <constraint firstItem="uSM-wh-yOK" firstAttribute="top" secondItem="KbS-76-Idb" secondAttribute="bottom" id="HR8-uu-8bf"/>
+                                                <constraint firstItem="uSM-wh-yOK" firstAttribute="top" secondItem="KbS-76-Idb" secondAttribute="bottom" constant="12" id="HR8-uu-8bf"/>
                                                 <constraint firstAttribute="trailing" secondItem="uSM-wh-yOK" secondAttribute="trailing" id="HzZ-Yc-e5j"/>
                                                 <constraint firstItem="uSM-wh-yOK" firstAttribute="leading" secondItem="ROb-tx-RR8" secondAttribute="leading" id="M1e-2t-Uoh"/>
                                                 <constraint firstItem="KbS-76-Idb" firstAttribute="trailing" secondItem="ROb-tx-RR8" secondAttribute="trailingMargin" id="N6C-RG-cw3"/>
@@ -195,7 +195,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-9t-4pn">
-                                                    <rect key="frame" x="15" y="134" width="345" height="162"/>
+                                                    <rect key="frame" x="15" y="146" width="345" height="150"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -207,7 +207,7 @@
                                                 <constraint firstItem="2fm-nj-g2l" firstAttribute="trailing" secondItem="9HD-wg-D5d" secondAttribute="trailingMargin" id="dgm-pp-qdr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nb6-E8-fPe" secondAttribute="trailing" id="est-kx-kOj"/>
                                                 <constraint firstItem="rFi-9t-4pn" firstAttribute="trailing" secondItem="9HD-wg-D5d" secondAttribute="trailingMargin" id="i8W-mo-zIi"/>
-                                                <constraint firstItem="rFi-9t-4pn" firstAttribute="top" secondItem="2fm-nj-g2l" secondAttribute="bottom" id="rWE-s4-H0j"/>
+                                                <constraint firstItem="rFi-9t-4pn" firstAttribute="top" secondItem="2fm-nj-g2l" secondAttribute="bottom" constant="12" id="rWE-s4-H0j"/>
                                                 <constraint firstItem="nb6-E8-fPe" firstAttribute="leading" secondItem="9HD-wg-D5d" secondAttribute="leadingMargin" id="sjj-nC-bA8"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -221,11 +221,11 @@
                                             <outlet property="tweetTextLabel" destination="2fm-nj-g2l" id="Hao-jr-mgp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="243" id="va0-L5-quA" customClass="QuoteCell" customModule="BolsonaroTweets" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="557" width="375" height="243"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="330" id="va0-L5-quA" customClass="QuoteCell" customModule="BolsonaroTweets" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="557" width="375" height="330"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="va0-L5-quA" id="Z7H-U2-KL2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="242.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="329.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-Cn-hRL">
@@ -279,13 +279,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full content of the tweet. No more than 280 characters. Followed or substituted by an image if applicable." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3h-Uc-1wv">
-                                                    <rect key="frame" x="15" y="59" width="345" height="124.5"/>
+                                                    <rect key="frame" x="15" y="59" width="345" height="62.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="iPy-3M-iSZ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-pk-P8X">
-                                                    <rect key="frame" x="15" y="183.5" width="345" height="101"/>
+                                                    <rect key="frame" x="15" y="127.5" width="345" height="196"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-Lt-PXI">
                                                             <rect key="frame" x="6" y="6" width="333" height="36"/>
@@ -343,7 +346,10 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full contect of the quote tweet. Up to 280 additional characters." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WR-PR-l3h">
-                                                            <rect key="frame" x="6" y="54" width="333" height="41"/>
+                                                            <rect key="frame" x="6" y="54" width="333" height="136"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="136" id="dBh-y5-ShE"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -359,26 +365,15 @@
                                                         <constraint firstAttribute="trailing" secondItem="ktc-Lt-PXI" secondAttribute="trailing" constant="6" id="h7G-Ht-ptU"/>
                                                         <constraint firstItem="ktc-Lt-PXI" firstAttribute="top" secondItem="Umd-pk-P8X" secondAttribute="top" constant="6" id="xZM-mw-cB2"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="6"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="j3h-Uc-1wv" firstAttribute="centerY" secondItem="Z7H-U2-KL2" secondAttribute="centerY" id="BPN-HD-Bwq"/>
+                                                <constraint firstAttribute="bottom" secondItem="Umd-pk-P8X" secondAttribute="bottom" constant="6" id="Cde-CO-881"/>
                                                 <constraint firstItem="j3h-Uc-1wv" firstAttribute="trailing" secondItem="Z7H-U2-KL2" secondAttribute="trailingMargin" id="Ecm-B9-p9r"/>
                                                 <constraint firstItem="zpT-Cn-hRL" firstAttribute="leading" secondItem="Z7H-U2-KL2" secondAttribute="leadingMargin" id="J48-ar-wxZ"/>
                                                 <constraint firstItem="j3h-Uc-1wv" firstAttribute="top" secondItem="zpT-Cn-hRL" secondAttribute="bottom" constant="12" id="KbL-Xi-1dk"/>
                                                 <constraint firstItem="j3h-Uc-1wv" firstAttribute="leading" secondItem="Z7H-U2-KL2" secondAttribute="leadingMargin" id="Myp-eU-oTS"/>
-                                                <constraint firstItem="Umd-pk-P8X" firstAttribute="top" secondItem="j3h-Uc-1wv" secondAttribute="bottom" id="OZ7-qU-7iO"/>
+                                                <constraint firstItem="Umd-pk-P8X" firstAttribute="top" secondItem="j3h-Uc-1wv" secondAttribute="bottom" constant="6" id="OZ7-qU-7iO"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Umd-pk-P8X" secondAttribute="trailing" id="V7K-V4-qoA"/>
                                                 <constraint firstItem="Umd-pk-P8X" firstAttribute="leading" secondItem="Z7H-U2-KL2" secondAttribute="leadingMargin" id="XK5-IG-vzl"/>
                                                 <constraint firstItem="zpT-Cn-hRL" firstAttribute="top" secondItem="Z7H-U2-KL2" secondAttribute="topMargin" id="YAu-sc-eSe"/>
@@ -430,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351.19999999999999" y="554.57271364317842"/>
+            <point key="canvasLocation" x="-351.19999999999999" y="554.1229385307347"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
@@ -485,8 +480,8 @@
                                 <rect key="frame" x="169" y="-14.5" width="37.5" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-zY-JxJ">
-                                <rect key="frame" x="25" y="140.5" width="144" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma/Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-zY-JxJ">
+                                <rect key="frame" x="23" y="140.5" width="146" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -533,7 +528,6 @@
                     <connections>
                         <outlet property="bannerView" destination="nMK-hw-fna" id="yIP-6C-zJw"/>
                         <outlet property="languageButton" destination="EPQ-EL-uLB" id="UYK-Lb-J2M"/>
-                        <outlet property="languageLabel" destination="XeW-zY-JxJ" id="SbU-yM-6BF"/>
                         <outlet property="replyLabel" destination="iiZ-el-hOZ" id="g6m-Nk-A3f"/>
                         <outlet property="replySwitch" destination="Ago-4w-HaX" id="yXm-ke-zua"/>
                         <outlet property="retweetLabel" destination="CY0-ds-xlb" id="5Ab-3O-erh"/>

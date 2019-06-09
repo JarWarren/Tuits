@@ -15,7 +15,7 @@ class TweetController: NetworkManager {
         let retweets = SettingsController.shared.allSettings["Retweets"] ?? false
         let replies = SettingsController.shared.allSettings["Replies"] ?? false
         
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&include_rts=\(retweets)&exclude_replies=\(!replies)") else { completion(.failure(NetworkResponse.failed)); return }
+        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&count=200&include_rts=\(retweets)&exclude_replies=\(!replies)") else { completion(.failure(NetworkResponse.failed)); return }
         
         print("\n\n\(baseURL)\n\n")
         
