@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SettingsVCDelegate {
 
     @IBOutlet weak var bolsoTableView: UITableView!
     @IBOutlet weak var bannerView: DFPBannerView!
@@ -23,6 +23,68 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         bolsoTableView.dataSource = self
         bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "tableViewBG"))
         tabBarController?.tabBar.items?[1].title = "Settings".localize
+        fetchTweets()
+        if let settingsVC = tabBarController?.viewControllers?[1] as? SecondViewController {
+            settingsVC.delegate = self
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab1")
+        bolsoTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tweets.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tweet = tweets[indexPath.row]
+        
+        switch tweet.type {
+            
+        case .original:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
+            cell.tweetImageView.image = nil
+            cell.tweet = tweet
+            return cell
+            
+        case .retweet:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "retweetCell", for: indexPath) as? RetweetCell else { return UITableViewCell() }
+            cell.tweetImageView.image = nil
+            cell.tweet = tweet
+            return cell
+            
+        case .quote:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuoteCell else { return UITableViewCell() }
+            cell.tweet = tweet
+            return cell
+            
+        default: break
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+       
+        if let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else if let cell = tableView.cellForRow(at: indexPath) as? RetweetCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else if let cell = tableView.cellForRow(at: indexPath) as? QuoteCell,
+            let tweet = cell.tweet {
+            return actionsFor(tweet)
+        } else {
+            return nil
+        }
+    }
+    
+    func fetchTweets() {
         TweetController.fetchTweets { (result) in
             
             switch result {
@@ -46,45 +108,8 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func actionsFor(_ tweet: Tweet) -> UISwipeActionsConfiguration {
         
-        AdManager.displayBannerAds(on: bannerView, for: self)
-        bolsoTableView.reloadData()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweets.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let tweet = tweets[indexPath.row]
-        
-        switch tweet.tweetType {
-            
-        case .original:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
-            cell.tweetImageView.image = nil
-            cell.tweet = tweet
-            return cell
-            
-        case .retweet:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "retweetCell", for: indexPath) as? RetweetCell else { return UITableViewCell() }
-            cell.tweetImageView.image = nil
-            cell.tweet = tweet
-            return cell
-            
-        case .quote:
-            break
-        }
-        return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-       
-        guard let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
-        let tweet = cell.tweet else { return nil }
         let tweetID =  "\(tweet.id)"
         
         let action1 = UIContextualAction(style: .normal, title: nil) { (_, _, _) in

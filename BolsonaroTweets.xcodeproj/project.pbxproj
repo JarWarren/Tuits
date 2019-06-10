@@ -15,6 +15,7 @@
 		7E205F88227E98F500483125 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F87227E98F500483125 /* QuoteCell.swift */; };
 		7E20A2D9225AC9D0006539F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E20A2DB225AC9D0006539F5 /* Localizable.strings */; };
 		7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */; };
+		7E478E7D22ADA19400390919 /* AdUnits.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E478E7C22ADA19400390919 /* AdUnits.plist */; };
 		7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194AF222A365200F8DA66 /* Decoding.swift */; };
 		7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B1222A434200F8DA66 /* TweetCell.swift */; };
 		7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B3222A45AF00F8DA66 /* TweetController.swift */; };
@@ -41,6 +42,7 @@
 		7E20A2DA225AC9D0006539F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E20A2DC225AC9D4006539F5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAdManager.swift; sourceTree = "<group>"; };
+		7E478E7C22ADA19400390919 /* AdUnits.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AdUnits.plist; sourceTree = "<group>"; };
 		7E5194AF222A365200F8DA66 /* Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoding.swift; sourceTree = "<group>"; };
 		7E5194B1222A434200F8DA66 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		7E5194B3222A45AF00F8DA66 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				7EE679A22228A071005CE163 /* AppDelegate.swift */,
 				7EE679AB2228A072005CE163 /* Assets.xcassets */,
 				7EEB1B88222F5B95000F4C92 /* Authentication.plist */,
+				7E478E7C22ADA19400390919 /* AdUnits.plist */,
 				7EE679B02228A072005CE163 /* Info.plist */,
 			);
 			path = Resources;
@@ -282,6 +285,7 @@
 				7EEB1B89222F5B95000F4C92 /* Authentication.plist in Resources */,
 				7EE679AC2228A072005CE163 /* Assets.xcassets in Resources */,
 				7EE679AA2228A071005CE163 /* Main.storyboard in Resources */,
+				7E478E7D22ADA19400390919 /* AdUnits.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warren.BolsonaroTweets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warren.bolsonarotweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warren.BolsonaroTweets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warren.bolsonarotweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
