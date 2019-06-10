@@ -25,8 +25,13 @@ struct AdManager {
     
     static func displayLiveAds(to banner: DFPBannerView, on rootViewController: UIViewController, adUnitName: String) {
         
+        // todo: make a request
+        let request = DFPRequest()
+        request.testDevices = ["1e6e76e8d8c1f2588d47e3515fda0a76"]
+        
         banner.adUnitID = adUnitID(from: adUnitName)
         banner.rootViewController = rootViewController
+        banner.load(request)
         banner.adSize = kGADAdSizeBanner
     }
     
