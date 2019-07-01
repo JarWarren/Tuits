@@ -73,7 +73,8 @@ class SecondViewController: UIViewController {
         settingsLabel.text = "Settings"
         retweetLabel.text = "Include retweets:"
         replyLabel.text = "Include replies:"
-        tabBarController?.tabBar.items?[1].title = "Settings"
+        tabBarController?.tabBar.items?[2].title = "Settings"
+        // needs to be taken out of the view controllers. otherwise language doesn't change on app startup. not until they hit the 3rd tab
     }
     
     func definirParaOPortugues() {
@@ -83,7 +84,7 @@ class SecondViewController: UIViewController {
         settingsLabel.text = "Configurações"
         retweetLabel.text = "Incluir retweets:"
         replyLabel.text = "Incluir respostas:"
-        tabBarController?.tabBar.items?[1].title = "Configurações"
+        tabBarController?.tabBar.items?[2].title = "Configurações"
     }
 }
 
