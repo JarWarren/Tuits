@@ -11,6 +11,7 @@ import GoogleMobileAds
 
 class SettingsVC: UIViewController {
 
+    // MARK: - Outlets and Properties
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageButton: UIButton!
@@ -20,6 +21,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var replySwitch: UISwitch!
     @IBOutlet weak var bannerView: DFPBannerView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +32,7 @@ class SettingsVC: UIViewController {
         updateViewLanguage()
         
         // Fetch values for toggle settings, assign them to switches.
-        let toggleSettings = SettingsManager.valuesForSettings([.retweets,
+        let toggleSettings = SettingsManager.valuesForToggleSettings([.retweets,
                                                                 .replies])
         retweetSwitch.isOn = toggleSettings[0]
         replySwitch.isOn = toggleSettings[1]
@@ -42,6 +44,7 @@ class SettingsVC: UIViewController {
         AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab2")
     }
 
+    // MARK: - Actions
     @IBAction func languageButtonTapped(_ sender: UIButton) {
         
         if sender.imageView?.image == UIImage(named: "en") {
@@ -53,14 +56,15 @@ class SettingsVC: UIViewController {
     
     @IBAction func retweetSwitchSwitched(_ sender: UISwitch) {
         
-        SettingsManager.updateSetting(.retweets, to: sender.isOn)
+        SettingsManager.updateToggleSetting(.retweets, to: sender.isOn)
     }
     
     @IBAction func replySwitchSwitched(_ sender: UISwitch) {
 
-        SettingsManager.updateSetting(.replies, to: sender.isOn)
+        SettingsManager.updateToggleSetting(.replies, to: sender.isOn)
     }
     
+    // MARK: - Methods
     @objc func updateViewLanguage() {
         languageButton.setImage(UIImage(named: SettingsManager.currentLanguage()), for: .normal)
         settingsLabel.text = "Settings".localize

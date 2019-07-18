@@ -11,12 +11,14 @@ import GoogleMobileAds
 
 class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: - Outlets and Properties
     @IBOutlet weak var bolsoTableView: UITableView!
     @IBOutlet weak var bannerView: DFPBannerView!
     
     var tweets = [Tweet]()
     var querySettingsDidChange = false
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    // MARK: - TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
@@ -87,34 +90,6 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    @objc func prepareForFetch() {
-        querySettingsDidChange = true
-    }
-    
-    func fetchTweets() {
-        TweetController.fetchTweets { (result) in
-            
-            switch result {
-                
-            case .success(let tweets):
-                
-                self.tweets = tweets
-                
-                DispatchQueue.main.async {
-                    
-                    self.bolsoTableView.reloadData()
-                }
-                
-            case .failure(let error):
-                
-                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
-                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
-                alertController.addAction(ok)
-                self.present(alertController, animated: true)
-            }
-        }
-    }
-    
     func actionsFor(_ tweet: Tweet) -> UISwipeActionsConfiguration {
         
         let tweetID =  "\(tweet.id)"
@@ -149,5 +124,34 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         action2.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         action2.image = #imageLiteral(resourceName: "share")
         return UISwipeActionsConfiguration(actions: [action2, action1])
+    }
+    
+    // MARK: - Methods
+    @objc func prepareForFetch() {
+        querySettingsDidChange = true
+    }
+    
+    func fetchTweets() {
+        TweetController.fetchTweets { (result) in
+            
+            switch result {
+                
+            case .success(let tweets):
+                
+                self.tweets = tweets
+                
+                DispatchQueue.main.async {
+                    
+                    self.bolsoTableView.reloadData()
+                }
+                
+            case .failure(let error):
+                
+                let alertController = UIAlertController(title: "Network Error".localize, message: error.localizedDescription, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "Ok".localize, style: .default, handler: nil)
+                alertController.addAction(ok)
+                self.present(alertController, animated: true)
+            }
+        }
     }
 }
