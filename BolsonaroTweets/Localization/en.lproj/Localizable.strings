@@ -6,10 +6,14 @@
   Copyright © 2019 Warren. All rights reserved.
 */
 
-// MARK: - TweetsVC
+// MARK: - Tab1
 "Network Error" = "Network Error";
 "Ok" = "Ok";
 "Share" = "Share";
+
+// MARK: - Tab3
+"Include retweets:" = "Include retweets:";
+"Include replies:" = "Include replies:";
 
 // MARK: - Network Manager
 "You need to be authenticated first." = "You need to be authenticated first.";

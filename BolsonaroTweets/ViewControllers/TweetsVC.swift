@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SettingsVCDelegate {
+class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var bolsoTableView: UITableView!
     @IBOutlet weak var bannerView: DFPBannerView!
@@ -24,9 +24,8 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Se
         bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "tableViewBG"))
         tabBarController?.tabBar.items?[1].title = "Settings".localize
         fetchTweets()
-        if let settingsVC = tabBarController?.viewControllers?[1] as? SecondViewController {
-            settingsVC.delegate = self
-        }
+        
+        // TODO: Observe for toggle settings. if one of them changes, fetchTweets()
     }
     
     override func viewWillAppear(_ animated: Bool) {
