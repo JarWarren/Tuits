@@ -32,47 +32,47 @@ class Tweet {
         self.profilePicURL = profilePicURL
     }
     
-    convenience init?(tuit: Tuit) {
+    convenience init?(_ tweetObject: TweetObject) {
         
         // 1 - is retweeted?
-        switch tuit.retweeted_status == nil {
+        switch tweetObject.retweeted_status == nil {
         case true:
             
-            guard let date = tuit.created_at?.prefix(16),
-                let handle = tuit.user?.screen_name,
-                let name = tuit.user?.name,
-                let text = tuit.full_text,
-                let profilePicURL = tuit.user?.profile_image_url_https else { return nil }
-            let id = tuit.id
+            guard let date = tweetObject.created_at?.prefix(16),
+                let handle = tweetObject.user?.screen_name,
+                let name = tweetObject.user?.name,
+                let text = tweetObject.full_text,
+                let profilePicURL = tweetObject.user?.profile_image_url_https else { return nil }
+            let id = tweetObject.id
             
             self.init(tweetType: .original, date: String(date), handle: handle, name: name, text: text, id: id, profilePicURL: profilePicURL)
             
         case false:
-            guard let date = tuit.retweeted_status?.created_at?.prefix(16),
-                let handle = tuit.retweeted_status?.user?.screen_name,
-                let name = tuit.retweeted_status?.user?.name,
-                let text = tuit.retweeted_status?.full_text,
-                let profilePicURL = tuit.retweeted_status?.user?.profile_image_url_https else { return nil }
-            let id = tuit.id
+            guard let date = tweetObject.retweeted_status?.created_at?.prefix(16),
+                let handle = tweetObject.retweeted_status?.user?.screen_name,
+                let name = tweetObject.retweeted_status?.user?.name,
+                let text = tweetObject.retweeted_status?.full_text,
+                let profilePicURL = tweetObject.retweeted_status?.user?.profile_image_url_https else { return nil }
+            let id = tweetObject.id
             
             self.init(tweetType: .retweet, date: String(date), handle: handle, name: name, text: text, id: id, profilePicURL: profilePicURL)
         }
         
         // 2- determine if it quotes
-        if tuit.quoted_status != nil {
-            guard let qText = tuit.quoted_status?.full_text,
-                let qDate = tuit.quoted_status?.created_at?.prefix(16),
-                let qName = tuit.quoted_status?.user?.name,
-                let qHandle = tuit.quoted_status?.user?.screen_name,
-                let qProfPic = tuit.quoted_status?.user?.profile_image_url_https else { return }
+        if tweetObject.quoted_status != nil {
+            guard let qText = tweetObject.quoted_status?.full_text,
+                let qDate = tweetObject.quoted_status?.created_at?.prefix(16),
+                let qName = tweetObject.quoted_status?.user?.name,
+                let qHandle = tweetObject.quoted_status?.user?.screen_name,
+                let qProfPic = tweetObject.quoted_status?.user?.profile_image_url_https else { return }
             let quote = QuoteTweet(text: qText, date: String(qDate), name: qName, handle: qHandle, imageURL: qProfPic)
             self.type = .quote
             self.quote = quote
         }
         
         // 3 - determine if there is media
-        guard let mediaType = tuit.extended_entities?.media?.first?.type,
-            let media = tuit.extended_entities?.media else { return }
+        guard let mediaType = tweetObject.extended_entities?.media?.first?.type,
+            let media = tweetObject.extended_entities?.media else { return }
         self.mediaType = mediaType
         
         // 4 - determine media type

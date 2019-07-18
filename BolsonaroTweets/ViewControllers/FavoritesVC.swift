@@ -19,19 +19,5 @@ class FavoritesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        switch LocalizationManager.shared.activeLanguage.first {
-        case "en":
-            setToEnglish()
-        default:
-            definirParaOPortugues()
-        }
-    }
-
-    func setToEnglish() {
-        title = "Favorites"
-    }
-    
-    func definirParaOPortugues() {
-        title = "Favoritos"
     }
 }

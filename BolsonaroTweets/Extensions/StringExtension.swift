@@ -15,7 +15,7 @@ extension String {
         var localizedDate = self
         let month = localizedDate.components(separatedBy: " ")[1]
         
-        if LocalizationManager.shared.activeLanguage.first == "pt-BR" {
+        if SettingsManager.currentLanguage() == "pt-BR" {
             
             switch prefix(3) {
             case "Sun":
@@ -84,5 +84,11 @@ extension String {
         }
         
         return attributed
+    }
+    
+    var localize: String {
+        let path = Bundle.main.path(forResource: SettingsManager.currentLanguage(), ofType: "lproj")
+        let localizedBundle = Bundle(path: path ?? Bundle.main.path(forResource: "en", ofType: "lproj")!)
+        return NSLocalizedString(self, tableName: nil, bundle: localizedBundle!, value: "", comment: "")
     }
 }

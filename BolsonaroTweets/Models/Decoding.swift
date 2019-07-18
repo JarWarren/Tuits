@@ -9,7 +9,7 @@
 import Foundation
 
 // MAIN TWEET
-struct Tuit: Decodable {
+struct TweetObject: Decodable {
     let full_text: String?
     let created_at: String?
     let user: User?

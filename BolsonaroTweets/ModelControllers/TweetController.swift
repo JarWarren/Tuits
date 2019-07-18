@@ -12,10 +12,10 @@ class TweetController: NetworkManager {
     
     static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        let retweets = SettingsController.shared.allSettings["Retweets"] ?? false
-        let replies = SettingsController.shared.allSettings["Replies"] ?? false
+        let querySettings = SettingsManager.valuesForSettings([.retweets, .replies])
         
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&count=200&include_rts=\(retweets)&exclude_replies=\(!replies)") else { completion(.failure(NetworkResponse.failed)); return }
+        // twitter has inconsistent naming with "include rts" and "exclude replies". rather than keeping their naming convention, i'm standardizing them. this results in having to !excludeReplies when building the url.
+        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&count=200&include_rts=\(querySettings[0])&exclude_replies=\(!querySettings[1])") else { completion(.failure(NetworkResponse.failed)); return }
         
         print("\n\n\(baseURL)\n\n")
         
@@ -37,13 +37,13 @@ class TweetController: NetworkManager {
                     
                     do {
                         
-                        let timeline = try JSONDecoder().decode([Tuit].self, from: data)
+                        let timeline = try JSONDecoder().decode([TweetObject].self, from: data)
                         
                         var tweets = [Tweet]()
                         
-                        for tuit in timeline {
+                        for object in timeline {
                             
-                            guard let tweet = Tweet(tuit: tuit) else { completion(.failure(NetworkResponse.unableToDecode)); return }
+                            guard let tweet = Tweet(object) else { completion(.failure(NetworkResponse.unableToDecode)); return }
                             tweets.append(tweet)
                         }
                         

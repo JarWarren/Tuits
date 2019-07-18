@@ -19,20 +19,17 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var replySwitch: UISwitch!
     @IBOutlet weak var bannerView: DFPBannerView!
     
-    weak var delegate: SettingsVCDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch LocalizationManager.shared.activeLanguage.first {
-        case "en":
-            setToEnglish()
-        default:
-            definirParaOPortugues()
-        }
+        // Make sure view reflects currentLanguage
+        updateViewLanguage(SettingsManager.currentLanguage())
         
-        retweetSwitch.isOn = SettingsController.shared.allSettings["Retweets"] ?? false
-        replySwitch.isOn = SettingsController.shared.allSettings["Replies"] ?? false
+        // Fetch values for toggle settings, assign them to switches.
+        let toggleSettings = SettingsManager.valuesForSettings([.retweets,
+                                                                .replies])
+        retweetSwitch.isOn = toggleSettings[0]
+        replySwitch.isOn = toggleSettings[1]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,52 +40,27 @@ class SecondViewController: UIViewController {
 
     @IBAction func languageButtonTapped(_ sender: UIButton) {
         
-        switch sender.imageView?.image {
-        case #imageLiteral(resourceName: "en"):
-            definirParaOPortugues()
-        case #imageLiteral(resourceName: "pt"):
-            setToEnglish()
-        default:
-            break
+        if sender.imageView?.image == UIImage(named: "en") {
+            SettingsManager.changeLanguage(to: .portuguese)
+        } else {
+            SettingsManager.changeLanguage(to: .english)
         }
-        LocalizationManager.shared.saveLanguage()
     }
     
     @IBAction func retweetSwitchSwitched(_ sender: UISwitch) {
         
-        SettingsController.shared.shouldIncludeRetweets(bool: sender.isOn)
-        delegate?.fetchTweets()
+        SettingsManager.updateSetting(.retweets, to: sender.isOn)
     }
     
     @IBAction func replySwitchSwitched(_ sender: UISwitch) {
 
-        SettingsController.shared.shouldExcludeReplies(bool: sender.isOn)
-        delegate?.fetchTweets()
+        SettingsManager.updateSetting(.replies, to: sender.isOn)
     }
     
-    func setToEnglish() {
-        
-        LocalizationManager.shared.setToEnglish()
-        languageButton.setImage(#imageLiteral(resourceName: "en"), for: .normal)
-        settingsLabel.text = "Settings"
-        retweetLabel.text = "Include retweets:"
-        replyLabel.text = "Include replies:"
-        tabBarController?.tabBar.items?[2].title = "Settings"
-        // needs to be taken out of the view controllers. otherwise language doesn't change on app startup. not until they hit the 3rd tab
+    func updateViewLanguage(_ language: String) {
+        languageButton.setImage(UIImage(named: language), for: .normal)
+        settingsLabel.text = "Settings".localize
+        retweetLabel.text = "Include retweets:".localize
+        replyLabel.text = "Include replies:".localize
     }
-    
-    func definirParaOPortugues() {
-        
-        LocalizationManager.shared.definirParaOPortuguês()
-        languageButton.setImage(#imageLiteral(resourceName: "pt"), for: .normal)
-        settingsLabel.text = "Configurações"
-        retweetLabel.text = "Incluir retweets:"
-        replyLabel.text = "Incluir respostas:"
-        tabBarController?.tabBar.items?[2].title = "Configurações"
-    }
-}
-
-protocol SettingsVCDelegate: class {
-    
-    func fetchTweets()
 }
