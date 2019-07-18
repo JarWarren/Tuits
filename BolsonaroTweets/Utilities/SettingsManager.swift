@@ -10,8 +10,6 @@ import Foundation
 
 class SettingsManager {
     
-    // successfully merged localizationmanager and settingscontroller into one. got rid of singleton and reduced code by hundreds of lines. now saves to user defaults. after saving, posts a notification named "language", "retweets", etc. need to add an observer on view controllers https://www.hackingwithswift.com/example-code/system/how-to-post-messages-using-notificationcenter
-    
     /// Change the language and post an app-wide notification.
     static func changeLanguage(to language: Setting.Language) {
         UserDefaults.standard.setValue(language.value, forKey: language.key)
@@ -19,7 +17,7 @@ class SettingsManager {
     }
     
     /// Toggle one of the bool settings.
-    static func updateSetting(_ setting: Setting.Toggle, to value: Bool) {
+    static func updateToggleSetting(_ setting: Setting.Toggle, to value: Bool) {
         UserDefaults.standard.setValue(value, forKey: setting.key)
         NotificationCenter.default.post(name: Notification.Name(Setting.toggleKey), object: nil)
     }
@@ -30,7 +28,7 @@ class SettingsManager {
     }
     
     /// Retrieve the toggle setting values. Used when composing the url parameters. Returned in the same order they're passed in.
-    static func valuesForSettings(_ settings: [Setting.Toggle]) -> [Bool] {
+    static func valuesForToggleSettings(_ settings: [Setting.Toggle]) -> [Bool] {
         return settings.map { $0.value }
     }
 }
@@ -40,9 +38,11 @@ enum Setting {
     case language(Language)
     case toggle(Toggle)
     
-    // KEY AND VALUE
+    /// language
     static var languageKey = "language"
+    /// toggle
     static var toggleKey = "toggle"
+    /// language or toggle
     var key: String {
         switch self {
         case .language:
@@ -68,7 +68,7 @@ enum Setting {
             }
         }
         
-        /// Returns `"language"`.
+        /// `"language"`.
         var key: String { return "language" }
     }
     
@@ -78,9 +78,9 @@ enum Setting {
         case replies
         case retweets
         
-        /// Saved bool value for setting. Returns `false` if nothing has been set.
+        /// Saved bool setting. `False` if not yet set.
         var value: Bool { return UserDefaults.standard.bool(forKey: key) }
-        /// String name of the toggle setting.
+        /// "replies" or "retweets"
         var key: String { return self.rawValue }
         }
     

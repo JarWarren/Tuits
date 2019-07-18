@@ -12,7 +12,7 @@ class TweetController: NetworkManager {
     
     static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        let querySettings = SettingsManager.valuesForSettings([.retweets, .replies])
+        let querySettings = SettingsManager.valuesForToggleSettings([.retweets, .replies])
         
         // twitter has inconsistent naming with "include rts" and "exclude replies". rather than keeping their naming convention, i'm standardizing them. this results in having to !excludeReplies when building the url.
         guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&count=200&include_rts=\(querySettings[0])&exclude_replies=\(!querySettings[1])") else { completion(.failure(NetworkResponse.failed)); return }
