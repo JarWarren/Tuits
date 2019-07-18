@@ -14,6 +14,7 @@
 // MARK: - Tab3
 "Include retweets:" = "Include retweets:";
 "Include replies:" = "Include replies:";
+"Language:" = "Language:";
 
 // MARK: - Network Manager
 "You need to be authenticated first." = "You need to be authenticated first.";
@@ -24,6 +25,7 @@
 "We could not decode the response." = "We could not decode the response.";
 
 // MARK: - TabBar
+"Favorites" = "Favorites";
 "Settings" = "Settings";
 
 // MARK: - Cells

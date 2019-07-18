@@ -430,7 +430,7 @@
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="BolsonaroTweets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SettingsVC" customModule="BolsonaroTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,6 +528,7 @@
                     <connections>
                         <outlet property="bannerView" destination="nMK-hw-fna" id="yIP-6C-zJw"/>
                         <outlet property="languageButton" destination="EPQ-EL-uLB" id="UYK-Lb-J2M"/>
+                        <outlet property="languageLabel" destination="XeW-zY-JxJ" id="hVF-1O-YAX"/>
                         <outlet property="replyLabel" destination="iiZ-el-hOZ" id="g6m-Nk-A3f"/>
                         <outlet property="replySwitch" destination="Ago-4w-HaX" id="yXm-ke-zua"/>
                         <outlet property="retweetLabel" destination="CY0-ds-xlb" id="5Ab-3O-erh"/>
@@ -539,14 +540,13 @@
             </objects>
             <point key="canvasLocation" x="998" y="312"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Bolso Bar-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="BolsoBar" customModule="BolsonaroTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.26253250241279602" green="0.5766945481300354" blue="0.18027693033218384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>

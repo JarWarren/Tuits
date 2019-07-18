@@ -15,13 +15,13 @@ class SettingsManager {
     /// Change the language and post an app-wide notification.
     static func changeLanguage(to language: Setting.Language) {
         UserDefaults.standard.setValue(language.value, forKey: language.key)
-        NotificationCenter.default.post(name: Notification.Name(language.key), object: language.value)
+        NotificationCenter.default.post(name: Notification.Name(language.key), object: nil)
     }
     
     /// Toggle one of the bool settings.
     static func updateSetting(_ setting: Setting.Toggle, to value: Bool) {
         UserDefaults.standard.setValue(value, forKey: setting.key)
-        NotificationCenter.default.post(name: Notification.Name(setting.key), object: value)
+        NotificationCenter.default.post(name: Notification.Name(Setting.toggleKey), object: nil)
     }
     
     /// Retrieve the current language in the form of a string. Should be called when VCs first load.
@@ -58,6 +58,7 @@ enum Setting {
         case english
         case portuguese
         
+        /// "en" or "pt-BR"
         var value: String {
             switch self {
             case .english:
