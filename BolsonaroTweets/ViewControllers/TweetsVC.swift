@@ -15,6 +15,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var bannerView: DFPBannerView!
     
     var tweets = [Tweet]()
+    var querySettingsDidChange = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +26,17 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tabBarController?.tabBar.items?[1].title = "Settings".localize
         fetchTweets()
         
-        // TODO: Observe for toggle settings. if one of them changes, fetchTweets()
+        NotificationCenter.default.addObserver(self, selector: #selector(prepareForFetch), name: NSNotification.Name(rawValue: Setting.toggleKey), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab1")
-        bolsoTableView.reloadData()
+        if querySettingsDidChange {
+            fetchTweets()
+        } else {
+            bolsoTableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,6 +85,10 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else {
             return nil
         }
+    }
+    
+    @objc func prepareForFetch() {
+        querySettingsDidChange = true
     }
     
     func fetchTweets() {
