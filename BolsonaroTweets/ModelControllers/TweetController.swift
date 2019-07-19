@@ -10,16 +10,41 @@ import UIKit
 
 class TweetController: NetworkManager {
     
-    static func fetchTweets(completion: @escaping (Result <[Tweet], Error>) -> Void) {
+    /// Returns (true, "tweet content") if there are new tweets
+    static func newTweetsAvailable() -> (Bool, String) {
+        var noNewTweets = (false, "")
+        fetchTweets(true) { (result) in
+            switch result {
+            case .failure:
+                print("failed to check for new tweets")
+            case .success(let tweets):
+                let fetchedTweetDate = tweets.first?.date
+                let savedTweetDate = UserDefaults.standard.string(forKey: "tweetDate")
+                noNewTweets.0 = fetchedTweetDate == savedTweetDate
+                noNewTweets.1 = tweets.first?.text ?? ""
+            }
+        }
+        return noNewTweets
+    }
+    
+    static func fetchTweets(_ checkOnlyForNew: Bool = false, completion: @escaping (Result <[Tweet], Error>) -> Void) {
         
-        let querySettings = SettingsManager.valuesForToggleSettings([.retweets, .replies])
+        let fetchCount = checkOnlyForNew ? 1 : 200
+        
+        var urlString = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&count=\(fetchCount)"
+        
+        if !checkOnlyForNew {
+            urlString.append("&tweet_mode=extended")
+            let querySettings = SettingsManager.valuesForToggleSettings([.retweets, .replies])
+            urlString.append("&include_rts=\(querySettings[0])&exclude_replies=\(!querySettings[1])")
+        }
         
         // twitter has inconsistent naming with "include rts" and "exclude replies". rather than keeping their naming convention, i'm standardizing them. this results in having to !excludeReplies when building the url.
-        guard let baseURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jairbolsonaro&tweet_mode=extended&count=200&include_rts=\(querySettings[0])&exclude_replies=\(!querySettings[1])") else { completion(.failure(NetworkResponse.failed)); return }
+        guard let finalURL = URL(string: urlString) else { completion(.failure(NetworkResponse.failed)); return }
         
-        print("\n\n\(baseURL)\n\n")
+        print("\n\n\(finalURL)\n\n")
         
-        var request = URLRequest(url: baseURL)
+        var request = URLRequest(url: finalURL)
         request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
         
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in

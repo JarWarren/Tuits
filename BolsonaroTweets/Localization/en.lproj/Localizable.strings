@@ -30,3 +30,6 @@
 
 // MARK: - Cells
 "Retweeted" = "Jair M. Bolsonaro Retweeted";
+
+// MARK: - Notifications
+"One or more new Tweets." = "One or more new Tweets.";
