@@ -33,7 +33,7 @@ class SettingsVC: UIViewController {
         
         // Fetch values for toggle settings, assign them to switches.
         let toggleSettings = SettingsManager.valuesForToggleSettings([.retweets,
-                                                                .replies])
+                                                                      .replies])
         retweetSwitch.isOn = toggleSettings[0]
         replySwitch.isOn = toggleSettings[1]
     }

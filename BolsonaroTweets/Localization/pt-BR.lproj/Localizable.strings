@@ -13,7 +13,7 @@
 
 // MARK: - Tab3
 "Include retweets:" = "Incluir retweets:";
-"Include replies:" = "Incluir replies:";
+"Include replies:" = "Incluir respostas:";
 "Language:" = "Idioma:";
 
 // MARK: - Network Manager
@@ -30,3 +30,6 @@
 
 // MARK: - Cells
 "Retweeted" = "Jair M. Bolsonaro retweetou";
+
+// MARK: - Notifications
+"One or more new Tweets." = "Novos Tweets.";
