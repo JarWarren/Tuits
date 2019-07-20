@@ -119,7 +119,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.present(activityViewController, animated: true, completion: nil)
         }
         
-        action1.backgroundColor = #colorLiteral(red: 0.1143526807, green: 0.6294203997, blue: 0.9512725472, alpha: 1)
+        action1.backgroundColor = #colorLiteral(red: 0.1136763319, green: 0.7917308211, blue: 0.9969540238, alpha: 1)
         action1.image = #imageLiteral(resourceName: "twitter")
         action2.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         action2.image = #imageLiteral(resourceName: "share")
