@@ -14,37 +14,39 @@
             <objects>
                 <controller id="egS-MT-sOK">
                     <items>
-                        <group width="1" alignment="center" id="G3H-sQ-6bw">
+                        <group width="1" alignment="center" spacing="0.0" id="G3H-sQ-6bw">
                             <items>
-                                <imageView alignment="left" image="watchBird" id="Auo-5G-CD4">
-                                    <color key="tintColor" red="0.31636884570000001" green="0.71993947619999998" blue="0.19410318639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </imageView>
-                                <label alignment="left" verticalAlignment="bottom" text="DD-Mth-YY ti:me AM" id="hzC-QU-n9V">
-                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                </label>
+                                <imageView width="36" height="36" alignment="left" image="watchProfPic" id="Auo-5G-CD4"/>
+                                <group width="1" alignment="left" layout="vertical" id="PRg-As-BIB">
+                                    <items>
+                                        <group width="1" alignment="center" id="Gjh-Sj-24y">
+                                            <items>
+                                                <label alignment="left" text="Jair Bolsonaro" id="9Sv-MO-Vlo">
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </label>
+                                                <imageView alignment="left" image="watchVerified" id="5bP-TK-bZl"/>
+                                            </items>
+                                        </group>
+                                        <label alignment="left" text="@jairbolsonaro" id="3uG-i6-phK">
+                                            <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <group width="1" alignment="center" id="Gjh-Sj-24y">
-                            <items>
-                                <label alignment="left" text="Jair Bolsonaro" id="9Sv-MO-Vlo">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                                <imageView alignment="left" image="verified" id="5bP-TK-bZl"/>
-                            </items>
-                        </group>
-                        <label alignment="left" text="@jairbolsonaro" id="3uG-i6-phK">
-                            <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
                         <label alignment="left" text="Full content of the tweet. No more than 280 characters. Followed or substituted by an image if applicable." numberOfLines="0" id="NvX-gz-Ph3">
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label alignment="left" verticalAlignment="bottom" text="DD-Mth-YY ti:me AM" id="hzC-QU-n9V">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="439" y="497"/>
+            <point key="canvasLocation" x="438.30434782608694" y="496.33928571428572"/>
         </scene>
     </scenes>
 </document>
