@@ -25,9 +25,9 @@ class QuoteCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePic.layer.cornerRadius = profilePic.frame.width / 2
-        quoteView.layer.shadowColor = UIColor.lightGray.cgColor
-        quoteView.layer.shadowRadius = 6
-        quoteView.layer.shadowOpacity = 1
+        quoteView.layer.cornerRadius = 6
+        quoteView.layer.borderWidth = 1
+        quoteView.layer.borderColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
     }
     
     var tweet: Tweet? {

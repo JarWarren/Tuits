@@ -17,6 +17,8 @@ class DetailVC: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var bolsoCollectionView: UICollectionView!
+    @IBOutlet weak var retweetStackView: UIStackView!
+    @IBOutlet weak var retweetLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,25 @@ class DetailVC: UIViewController {
     
     func updateView(with tweet: Tweet, profilePic: UIImage) {
         loadViewIfNeeded()
-        nameLabel.text = tweet.name
-        handleLabel.text = "@" + tweet.handle
-        dateLabel.text = tweet.date.asLocalizedDate
-        tweetTextLabel.attributedText = tweet.text.tweetFormatted
-        profileImageView.image = profilePic
+        
+        if tweet.type != .quote {
+            nameLabel.text = tweet.name
+            handleLabel.text = "@" + tweet.handle
+            dateLabel.text = tweet.date.asLocalizedDate
+            tweetTextLabel.attributedText = tweet.text.tweetFormatted
+            profileImageView.image = profilePic
+        } else if let name = tweet.quote?.name,
+            let handle = tweet.quote?.handle,
+            let date = tweet.quote?.date?.asLocalizedDate,
+            let text = tweet.quote?.text?.tweetFormatted {
+            nameLabel.text = name
+            handleLabel.text = "@" + handle
+            dateLabel.text = date
+            tweetTextLabel.attributedText = text
+            profileImageView.image = profilePic
+        }
+        retweetStackView.isHidden = tweet.type != .retweet
+        retweetLabel.text = "Retweeted".localize
     }
     @IBAction func dismissButtonTapped(_ sender: Any) {
         dismiss(animated: false)
