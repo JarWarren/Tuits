@@ -49,29 +49,10 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tweet = tweets[indexPath.row]
-        
-        switch tweet.type {
-            
-        case .original:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UITableViewCell() }
-            cell.tweetImageView.image = nil
-            cell.tweet = tweet
-            return cell
-            
-        case .retweet:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "retweetCell", for: indexPath) as? RetweetCell else { return UITableViewCell() }
-            cell.tweetImageView.image = nil
-            cell.tweet = tweet
-            return cell
-            
-        case .quote:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuoteCell else { return UITableViewCell() }
-            cell.tweet = tweet
-            return cell
-            
-        default: break
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell
+        cell?.tweetImageView.image = nil
+        cell?.tweet = tweet
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

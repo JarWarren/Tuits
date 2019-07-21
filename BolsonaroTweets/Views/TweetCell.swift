@@ -16,6 +16,8 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var tweetImageView: UIImageView!
+    @IBOutlet weak var retweetStackView: UIStackView!
+    @IBOutlet weak var retweetLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +30,14 @@ class TweetCell: UITableViewCell {
     }
     
     func updateCell() {
-        
         guard let name = tweet?.name,
             let handle = tweet?.handle,
             let date = tweet?.date,
-            let text = tweet?.text else { return }
+            let text = tweet?.text,
+            let type = tweet?.type else { return }
+        
+        retweetStackView.isHidden = type != .retweet
+        retweetLabel.text = "Retweeted".localize
         
         nameLabel.text = name
         handleLabel.text = "@" + handle

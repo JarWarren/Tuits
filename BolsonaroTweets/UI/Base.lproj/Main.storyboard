@@ -39,10 +39,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-W3-5o9">
-                                                    <rect key="frame" x="15" y="11" width="345" height="36"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="52.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="nmP-7c-FeE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                            <rect key="frame" x="0.0" y="8.5" width="36" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="nmP-7c-FeE" secondAttribute="height" multiplier="1:1" id="OHP-h2-NzQ"/>
                                                                 <constraint firstAttribute="width" constant="36" id="PTz-uc-1Jp"/>
@@ -53,11 +53,29 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
-                                                            <rect key="frame" x="44" y="4" width="173" height="28.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="epC-lG-dQJ">
+                                                            <rect key="frame" x="44" y="0.0" width="173" height="52.5"/>
                                                             <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oHZ-81-kEn">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="20"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Retweet" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eun-JR-8VT">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="20"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retweet" translatesAutoresizingMaskIntoConstraints="NO" id="NqS-gA-Sh9">
+                                                                            <rect key="frame" x="49" y="0.0" width="20" height="20"/>
+                                                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="NqS-gA-Sh9" secondAttribute="height" multiplier="1:1" id="1gF-bz-xci"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-3D-1SE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="15.5"/>
+                                                                    <rect key="frame" x="0.0" y="22" width="127" height="15.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jair M. Bolsonaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-HV-yPr">
                                                                             <rect key="frame" x="0.0" y="0.0" width="109.5" height="15.5"/>
@@ -78,7 +96,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@jairbolsonaro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-QD-YnL">
-                                                                    <rect key="frame" x="0.0" y="15.5" width="72.5" height="13"/>
+                                                                    <rect key="frame" x="0.0" y="39.5" width="72.5" height="13"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -86,7 +104,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DD-Mth-YY ti:me AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-EP-sOc">
-                                                            <rect key="frame" x="225" y="11" width="120" height="14.5"/>
+                                                            <rect key="frame" x="225" y="19" width="120" height="14.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -94,13 +112,13 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full content of the tweet. No more than 280 characters. Followed or substituted by an image if applicable." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbS-76-Idb">
-                                                    <rect key="frame" x="15" y="59" width="345" height="63"/>
+                                                    <rect key="frame" x="15" y="75.5" width="345" height="63"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSM-wh-yOK">
-                                                    <rect key="frame" x="0.0" y="134" width="375" height="87.5"/>
+                                                    <rect key="frame" x="0.0" y="150.5" width="375" height="71"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -121,6 +139,8 @@
                                             <outlet property="handleLabel" destination="Mmc-QD-YnL" id="mjk-nY-5Mf"/>
                                             <outlet property="nameLabel" destination="jT5-HV-yPr" id="BLe-0S-NYl"/>
                                             <outlet property="profilePic" destination="nmP-7c-FeE" id="cMI-yG-6S7"/>
+                                            <outlet property="retweetLabel" destination="eun-JR-8VT" id="F75-FP-Ymv"/>
+                                            <outlet property="retweetStackView" destination="oHZ-81-kEn" id="m5t-Td-lzh"/>
                                             <outlet property="tweetImageView" destination="uSM-wh-yOK" id="dPk-ZU-Upl"/>
                                             <outlet property="tweetTextLabel" destination="KbS-76-Idb" id="QBn-uA-RrU"/>
                                         </connections>
