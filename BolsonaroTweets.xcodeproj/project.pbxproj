@@ -23,7 +23,6 @@
 		7E0E9352227DFF700099DE14 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E9351227DFF700099DE14 /* StringExtension.swift */; };
 		7E205F82227E63C500483125 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F81227E63C500483125 /* SettingsManager.swift */; };
 		7E205F84227E925700483125 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F83227E925700483125 /* UIImageExtension.swift */; };
-		7E205F86227E98E900483125 /* RetweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F85227E98E800483125 /* RetweetCell.swift */; };
 		7E205F88227E98F500483125 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E205F87227E98F500483125 /* QuoteCell.swift */; };
 		7E20A2D9225AC9D0006539F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E20A2DB225AC9D0006539F5 /* Localizable.strings */; };
 		7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */; };
@@ -105,7 +104,6 @@
 		7E0E9351227DFF700099DE14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7E205F81227E63C500483125 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		7E205F83227E925700483125 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		7E205F85227E98E800483125 /* RetweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetweetCell.swift; sourceTree = "<group>"; };
 		7E205F87227E98F500483125 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		7E20A2DA225AC9D0006539F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E20A2DC225AC9D4006539F5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				7E5194B1222A434200F8DA66 /* TweetCell.swift */,
-				7E205F85227E98E800483125 /* RetweetCell.swift */,
 				7E205F87227E98F500483125 /* QuoteCell.swift */,
 				7E65212622E35676001D25ED /* DetailVC.swift */,
 			);
@@ -553,7 +550,6 @@
 				7E0C8FAD22E185D0009A52B1 /* NotificationManager.swift in Sources */,
 				7EE679A52228A071005CE163 /* TweetsVC.swift in Sources */,
 				7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */,
-				7E205F86227E98E900483125 /* RetweetCell.swift in Sources */,
 				7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */,
 				7E205F84227E925700483125 /* UIImageExtension.swift in Sources */,
 				7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */,

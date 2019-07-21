@@ -62,22 +62,26 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailVC,
-            // TODO: Consolidate all tableview cells into a single type
-            let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
-            let profilePic = cell.profilePic.image {
-            let tweet = tweets[indexPath.row]
+        let tweet = tweets[indexPath.row]
+        
+        guard let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailVC else { return }
+    
+        switch tweet.type {
+        case .quote:
+            let cell = tableView.cellForRow(at: indexPath) as? QuoteCell
+            guard let profilePic = cell?.quoteProfilePic.image else { return }
             detailVC.updateView(with: tweet, profilePic: profilePic)
-            present(detailVC, animated: false)
+        default:
+            let cell = tableView.cellForRow(at: indexPath) as? TweetCell
+            guard let profilePic = cell?.profilePic.image else { return }
+            detailVC.updateView(with: tweet, profilePic: profilePic)
         }
+        present(detailVC, animated: false)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
         if let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
-            let tweet = cell.tweet {
-            return actionsFor(tweet)
-        } else if let cell = tableView.cellForRow(at: indexPath) as? RetweetCell,
             let tweet = cell.tweet {
             return actionsFor(tweet)
         } else if let cell = tableView.cellForRow(at: indexPath) as? QuoteCell,
