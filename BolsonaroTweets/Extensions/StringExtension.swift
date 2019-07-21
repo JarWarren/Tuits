@@ -80,7 +80,13 @@ extension String {
         range = NSRange(location: 0, length: attributed.string.utf16.count)
         
         for match in regex?.matches(in: attributed.string, options: [], range: range) ?? [] {
-            attributed.addAttribute(.foregroundColor, value: #colorLiteral(red: 0.1136763319, green: 0.7917308211, blue: 0.9969540238, alpha: 1), range: match.range)
+            attributed.addAttribute(.foregroundColor, value: #colorLiteral(red: 0.03756484017, green: 0.5855799317, blue: 0.06929770857, alpha: 1), range: match.range)
+        }
+        
+        let secondRegex = try? NSRegularExpression(pattern: "#[a-z0-9]+", options: .caseInsensitive)
+        
+        for match in secondRegex?.matches(in: attributed.string, options: [], range: range) ?? [] {
+            attributed.addAttribute(.foregroundColor, value: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), range: match.range)
         }
         
         return attributed
