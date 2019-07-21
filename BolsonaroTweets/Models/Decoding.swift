@@ -35,7 +35,7 @@ struct Medium: Decodable {
 struct VideoInfo: Decodable {
     let variants: [VideoVariant]?
 }
-// if the media type is NOT "photo", then the desired url the variant url
+// if the media type is NOT "photo", then the desired url is the variant url
 struct VideoVariant: Decodable {
     let url: String?
 }

@@ -32,6 +32,7 @@
 		7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5194B3222A45AF00F8DA66 /* TweetController.swift */; };
 		7E65212522E35642001D25ED /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E65212422E35642001D25ED /* Detail.storyboard */; };
 		7E65212722E35676001D25ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65212622E35676001D25ED /* DetailVC.swift */; };
+		7E65212F22E509B2001D25ED /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65212E22E509B2001D25ED /* MediaCell.swift */; };
 		7E9D9640222A20B80000C339 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D963F222A20B80000C339 /* Tweet.swift */; };
 		7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED4F60D22583F9C00859B19 /* NetworkManager.swift */; };
 		7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A22228A071005CE163 /* AppDelegate.swift */; };
@@ -114,6 +115,7 @@
 		7E5194B3222A45AF00F8DA66 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
 		7E65212422E35642001D25ED /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		7E65212622E35676001D25ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		7E65212E22E509B2001D25ED /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		7E9D963F222A20B80000C339 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7ED4F60D22583F9C00859B19 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7EE6799F2228A071005CE163 /* BolsonaroTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BolsonaroTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,9 +201,8 @@
 		7E5194AC222A360F00F8DA66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7E5194B1222A434200F8DA66 /* TweetCell.swift */,
-				7E205F87227E98F500483125 /* QuoteCell.swift */,
-				7E65212622E35676001D25ED /* DetailVC.swift */,
+				7E65212B22E50339001D25ED /* MediaViews */,
+				7E65212A22E5032F001D25ED /* Tweets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +224,41 @@
 				7E0C8FAC22E185D0009A52B1 /* NotificationManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7E65212822E50313001D25ED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7EE679A42228A071005CE163 /* TweetsVC.swift */,
+				7E65212622E35676001D25ED /* DetailVC.swift */,
+				7EE679A62228A071005CE163 /* SettingsVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E65212922E5031F001D25ED /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C8FA922E01FE2009A52B1 /* TweetTBC.swift */,
+			);
+			path = Accessory;
+			sourceTree = "<group>";
+		};
+		7E65212A22E5032F001D25ED /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				7E5194B1222A434200F8DA66 /* TweetCell.swift */,
+				7E205F87227E98F500483125 /* QuoteCell.swift */,
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
+		7E65212B22E50339001D25ED /* MediaViews */ = {
+			isa = PBXGroup;
+			children = (
+				7E65212E22E509B2001D25ED /* MediaCell.swift */,
+			);
+			path = MediaViews;
 			sourceTree = "<group>";
 		};
 		7E9D9639222A20230000C339 /* UI */ = {
@@ -250,9 +286,8 @@
 		7E9D963D222A20820000C339 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7E0C8FA922E01FE2009A52B1 /* TweetTBC.swift */,
-				7EE679A42228A071005CE163 /* TweetsVC.swift */,
-				7EE679A62228A071005CE163 /* SettingsVC.swift */,
+				7E65212922E5031F001D25ED /* Accessory */,
+				7E65212822E50313001D25ED /* Main */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -544,6 +579,7 @@
 				7E205F82227E63C500483125 /* SettingsManager.swift in Sources */,
 				7EE679A72228A071005CE163 /* SettingsVC.swift in Sources */,
 				7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */,
+				7E65212F22E509B2001D25ED /* MediaCell.swift in Sources */,
 				7E65212722E35676001D25ED /* DetailVC.swift in Sources */,
 				7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */,
 				7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */,

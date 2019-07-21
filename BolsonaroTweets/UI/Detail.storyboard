@@ -137,47 +137,92 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BVf-6J-20A">
-                                <rect key="frame" x="0.0" y="311.5" width="414" height="550.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mcf-08-iHQ">
-                                    <size key="itemSize" width="50" height="50"/>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRv-Z5-MFr">
+                                <rect key="frame" x="12" y="311.5" width="390" height="538.5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="OuZ-6s-Nse" kind="embed" id="WCJ-d9-HWY"/>
+                                </connections>
+                            </containerView>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-JK-a5t">
+                                <rect key="frame" x="12" y="311.5" width="390" height="538.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QvB-wl-EiM">
+                                    <size key="itemSize" width="331" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pqk-BM-6zV">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mediaCell" id="qOM-2R-JHt" customClass="MediaCell" customModule="BolsonaroTweets" customModuleProvider="target">
+                                        <rect key="frame" x="29.5" y="0.0" width="331" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="315"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DA9-jP-5fN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="331" height="315"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="DA9-jP-5fN" secondAttribute="bottom" id="8pL-QJ-G0U"/>
+                                            <constraint firstAttribute="trailing" secondItem="DA9-jP-5fN" secondAttribute="trailing" id="KGT-5Q-FPI"/>
+                                            <constraint firstItem="DA9-jP-5fN" firstAttribute="top" secondItem="qOM-2R-JHt" secondAttribute="top" id="MJA-cY-PDc"/>
+                                            <constraint firstItem="DA9-jP-5fN" firstAttribute="leading" secondItem="qOM-2R-JHt" secondAttribute="leading" id="cov-yS-yYU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="mediaImageView" destination="DA9-jP-5fN" id="gGk-OU-MBh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BVf-6J-20A" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" id="18Q-Kx-vBH"/>
                             <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="oEf-pY-nPd" secondAttribute="trailing" constant="24" id="1p6-ZE-M06"/>
-                            <constraint firstItem="ChX-8y-MXt" firstAttribute="bottom" secondItem="BVf-6J-20A" secondAttribute="bottom" id="I0G-a2-HUl"/>
+                            <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="hRv-Z5-MFr" secondAttribute="trailing" constant="12" id="G2m-h7-Vax"/>
                             <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="qkn-IV-tA1" secondAttribute="trailing" constant="24" id="JSY-qg-z1K"/>
                             <constraint firstItem="oEf-pY-nPd" firstAttribute="top" secondItem="qkn-IV-tA1" secondAttribute="bottom" constant="24" id="PZN-ex-KSc"/>
                             <constraint firstItem="oEf-pY-nPd" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="24" id="QUs-cQ-SeW"/>
-                            <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="BVf-6J-20A" secondAttribute="trailing" id="Xnb-1U-r8G"/>
-                            <constraint firstItem="BVf-6J-20A" firstAttribute="top" secondItem="oEf-pY-nPd" secondAttribute="bottom" constant="12" id="fVr-GW-bWw"/>
+                            <constraint firstItem="6qr-JK-a5t" firstAttribute="height" secondItem="hRv-Z5-MFr" secondAttribute="height" id="Zej-Ud-Tbz"/>
+                            <constraint firstItem="hRv-Z5-MFr" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="12" id="g8G-P8-udP"/>
+                            <constraint firstItem="6qr-JK-a5t" firstAttribute="centerX" secondItem="hRv-Z5-MFr" secondAttribute="centerX" id="okI-fg-Gdr"/>
+                            <constraint firstItem="6qr-JK-a5t" firstAttribute="width" secondItem="hRv-Z5-MFr" secondAttribute="width" id="pZ2-76-Nii"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="top" secondItem="ChX-8y-MXt" secondAttribute="top" constant="24" id="qgX-Hg-eTB"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="24" id="qqM-Lw-d2t"/>
+                            <constraint firstItem="6qr-JK-a5t" firstAttribute="centerY" secondItem="hRv-Z5-MFr" secondAttribute="centerY" id="siU-Sw-5Ym"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="centerX" secondItem="ChX-8y-MXt" secondAttribute="centerX" id="utS-YG-LdH"/>
+                            <constraint firstItem="ChX-8y-MXt" firstAttribute="bottom" secondItem="hRv-Z5-MFr" secondAttribute="bottom" constant="12" id="ycj-8R-9ca"/>
+                            <constraint firstItem="hRv-Z5-MFr" firstAttribute="top" secondItem="oEf-pY-nPd" secondAttribute="bottom" constant="12" id="zdL-7h-h0c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ChX-8y-MXt"/>
                     </view>
                     <connections>
-                        <outlet property="bolsoCollectionView" destination="BVf-6J-20A" id="FaN-YI-gRw"/>
                         <outlet property="dateLabel" destination="rVL-SN-rC6" id="v2k-ET-on7"/>
                         <outlet property="handleLabel" destination="eze-Um-pAU" id="9nZ-RW-LXq"/>
+                        <outlet property="mediaCollectionView" destination="6qr-JK-a5t" id="pt5-Da-37F"/>
+                        <outlet property="mediaContainerView" destination="hRv-Z5-MFr" id="vcu-fq-UI8"/>
                         <outlet property="nameLabel" destination="9RA-Uf-19K" id="aJ0-7C-2z4"/>
                         <outlet property="profileImageView" destination="Ggv-Xx-Deb" id="Of7-H3-V0x"/>
                         <outlet property="retweetLabel" destination="QqO-iO-fpS" id="P0J-Qf-sNj"/>
@@ -189,6 +234,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSZ-Zs-3yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="398.55072463768118" y="-226.33928571428569"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="uEd-tl-7tK">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="OuZ-6s-Nse" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKr-3R-6Ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="453"/>
         </scene>
     </scenes>
     <resources>
