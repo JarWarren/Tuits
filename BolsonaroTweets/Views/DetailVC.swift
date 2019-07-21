@@ -10,21 +10,34 @@ import UIKit
 
 class DetailVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var handleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var bolsoCollectionView: UICollectionView!
+    
+    func updateView(with tweet: Tweet) {
+        loadViewIfNeeded()
+        nameLabel.text = tweet.name
+        handleLabel.text = "@" + tweet.handle
+        dateLabel.text = tweet.date.asLocalizedDate
+        tweetTextLabel.attributedText = tweet.text.tweetFormatted
+        
+        TweetController.fetchImageAt(url: tweet.profilePicURL) { (result) in
+            switch result {
+            case .success(let profilePicture):
+                DispatchQueue.main.async {
+                    self.profileImageView.image = profilePicture
+                }
+            case .failure: break
+            }
+        }
+    }
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goToTwitterButtonTapped(_ sender: Any) {
     }
-    */
-
 }

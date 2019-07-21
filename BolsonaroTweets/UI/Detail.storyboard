@@ -28,11 +28,17 @@
                                         <state key="normal" title="    Ⓧ">
                                             <color key="titleColor" red="0.26253250241279602" green="0.5766945481300354" blue="0.18027693033218384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="Cx5-PY-g4t" eventType="touchUpInside" id="7a8-AB-dfR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDQ-Qk-p3u">
                                         <rect key="frame" x="296.5" y="0.0" width="69.5" height="44"/>
                                         <color key="tintColor" red="0.37324362993240356" green="0.780101478099823" blue="0.97650331258773804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button" image="twitter"/>
+                                        <connections>
+                                            <action selector="goToTwitterButtonTapped:" destination="Cx5-PY-g4t" eventType="touchUpInside" id="mDn-re-QFf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -139,6 +145,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ChX-8y-MXt"/>
                     </view>
+                    <connections>
+                        <outlet property="bolsoCollectionView" destination="BVf-6J-20A" id="FaN-YI-gRw"/>
+                        <outlet property="dateLabel" destination="rVL-SN-rC6" id="v2k-ET-on7"/>
+                        <outlet property="handleLabel" destination="eze-Um-pAU" id="9nZ-RW-LXq"/>
+                        <outlet property="nameLabel" destination="9RA-Uf-19K" id="aJ0-7C-2z4"/>
+                        <outlet property="profileImageView" destination="Ggv-Xx-Deb" id="Of7-H3-V0x"/>
+                        <outlet property="tweetTextLabel" destination="cCV-E9-Y4L" id="x8M-bs-sYE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSZ-Zs-3yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

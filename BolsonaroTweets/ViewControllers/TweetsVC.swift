@@ -74,6 +74,15 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailVC {
+            let tweet = tweets[indexPath.row]
+            detailVC.updateView(with: tweet)
+            present(detailVC, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
         if let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
