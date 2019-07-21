@@ -76,10 +76,13 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailVC {
+        if let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailVC,
+            // TODO: Consolidate all tableview cells into a single type
+            let cell = tableView.cellForRow(at: indexPath) as? TweetCell,
+            let profilePic = cell.profilePic.image {
             let tweet = tweets[indexPath.row]
-            detailVC.updateView(with: tweet)
-            present(detailVC, animated: true)
+            detailVC.updateView(with: tweet, profilePic: profilePic)
+            present(detailVC, animated: false)
         }
     }
     
