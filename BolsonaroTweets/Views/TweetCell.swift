@@ -15,7 +15,6 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var tweetImageView: UIImageView!
     @IBOutlet weak var retweetStackView: UIStackView!
     @IBOutlet weak var retweetLabel: UILabel!
     
