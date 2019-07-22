@@ -49,13 +49,16 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tweet = tweets[indexPath.row]
+        print(tweet.mediaType)
         if tweet.type != .quote {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell
             cell?.tweet = tweet
+            cell?.backgroundColor = tweet.mediaType == nil ? .white : #colorLiteral(red: 0.9402887821, green: 0.940446198, blue: 0.9402680397, alpha: 1)
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuoteCell
             cell?.tweet = tweet
+            cell?.backgroundColor = tweet.mediaType == nil ? .white : #colorLiteral(red: 0.9402887821, green: 0.940446198, blue: 0.9402680397, alpha: 1)
             return cell ?? UITableViewCell()
         }
     }

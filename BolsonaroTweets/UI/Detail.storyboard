@@ -138,7 +138,7 @@
                                 </subviews>
                             </stackView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRv-Z5-MFr">
-                                <rect key="frame" x="12" y="311.5" width="390" height="538.5"/>
+                                <rect key="frame" x="0.0" y="311.5" width="414" height="550.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="6"/>
@@ -149,8 +149,8 @@
                                 </connections>
                             </containerView>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-JK-a5t">
-                                <rect key="frame" x="12" y="311.5" width="390" height="538.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="12" y="311.5" width="390" height="550.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QvB-wl-EiM">
                                     <size key="itemSize" width="331" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -167,6 +167,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DA9-jP-5fN">
                                                     <rect key="frame" x="0.0" y="0.0" width="331" height="315"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="6"/>
@@ -181,11 +182,6 @@
                                             <constraint firstItem="DA9-jP-5fN" firstAttribute="top" secondItem="qOM-2R-JHt" secondAttribute="top" id="MJA-cY-PDc"/>
                                             <constraint firstItem="DA9-jP-5fN" firstAttribute="leading" secondItem="qOM-2R-JHt" secondAttribute="leading" id="cov-yS-yYU"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="mediaImageView" destination="DA9-jP-5fN" id="gGk-OU-MBh"/>
                                         </connections>
@@ -201,19 +197,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="oEf-pY-nPd" secondAttribute="trailing" constant="24" id="1p6-ZE-M06"/>
-                            <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="hRv-Z5-MFr" secondAttribute="trailing" constant="12" id="G2m-h7-Vax"/>
+                            <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="hRv-Z5-MFr" secondAttribute="trailing" id="G2m-h7-Vax"/>
                             <constraint firstItem="ChX-8y-MXt" firstAttribute="trailing" secondItem="qkn-IV-tA1" secondAttribute="trailing" constant="24" id="JSY-qg-z1K"/>
                             <constraint firstItem="oEf-pY-nPd" firstAttribute="top" secondItem="qkn-IV-tA1" secondAttribute="bottom" constant="24" id="PZN-ex-KSc"/>
                             <constraint firstItem="oEf-pY-nPd" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="24" id="QUs-cQ-SeW"/>
                             <constraint firstItem="6qr-JK-a5t" firstAttribute="height" secondItem="hRv-Z5-MFr" secondAttribute="height" id="Zej-Ud-Tbz"/>
-                            <constraint firstItem="hRv-Z5-MFr" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="12" id="g8G-P8-udP"/>
+                            <constraint firstItem="hRv-Z5-MFr" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" id="g8G-P8-udP"/>
                             <constraint firstItem="6qr-JK-a5t" firstAttribute="centerX" secondItem="hRv-Z5-MFr" secondAttribute="centerX" id="okI-fg-Gdr"/>
-                            <constraint firstItem="6qr-JK-a5t" firstAttribute="width" secondItem="hRv-Z5-MFr" secondAttribute="width" id="pZ2-76-Nii"/>
+                            <constraint firstItem="6qr-JK-a5t" firstAttribute="width" secondItem="hRv-Z5-MFr" secondAttribute="width" constant="-24" id="pZ2-76-Nii"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="top" secondItem="ChX-8y-MXt" secondAttribute="top" constant="24" id="qgX-Hg-eTB"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="leading" secondItem="ChX-8y-MXt" secondAttribute="leading" constant="24" id="qqM-Lw-d2t"/>
                             <constraint firstItem="6qr-JK-a5t" firstAttribute="centerY" secondItem="hRv-Z5-MFr" secondAttribute="centerY" id="siU-Sw-5Ym"/>
                             <constraint firstItem="qkn-IV-tA1" firstAttribute="centerX" secondItem="ChX-8y-MXt" secondAttribute="centerX" id="utS-YG-LdH"/>
-                            <constraint firstItem="ChX-8y-MXt" firstAttribute="bottom" secondItem="hRv-Z5-MFr" secondAttribute="bottom" constant="12" id="ycj-8R-9ca"/>
+                            <constraint firstItem="ChX-8y-MXt" firstAttribute="bottom" secondItem="hRv-Z5-MFr" secondAttribute="bottom" id="ycj-8R-9ca"/>
                             <constraint firstItem="hRv-Z5-MFr" firstAttribute="top" secondItem="oEf-pY-nPd" secondAttribute="bottom" constant="12" id="zdL-7h-h0c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ChX-8y-MXt"/>

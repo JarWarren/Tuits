@@ -64,8 +64,9 @@ class DetailVC: UIViewController {
     func handleMedia(for tweet: Tweet) {
         if tweet.mediaType == "photo" {
             var fetchedPhotos = [UIImage]()
+            let finalPhotoIndex = tweet.mediaURLs.count - 1
             for string in tweet.mediaURLs {
-                
+                let tweetIndex = tweet.mediaURLs.firstIndex(of: string)
                 TweetController.fetchImageAt(url: string) { (result) in
                     switch result {
                     case .success(let image):
@@ -74,9 +75,11 @@ class DetailVC: UIViewController {
                         print(error)
                         print(error.localizedDescription)
                     }
-                    DispatchQueue.main.async {
-                        self.photos = fetchedPhotos
-                        self.mediaCollectionView.isHidden = false
+                    if tweetIndex == finalPhotoIndex {
+                        DispatchQueue.main.async {
+                            self.photos = fetchedPhotos
+                            self.mediaCollectionView.isHidden = false
+                        }
                     }
                 }
             }
@@ -99,6 +102,7 @@ class DetailVC: UIViewController {
 extension DetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if photos.count == 1 { collectionView.backgroundColor = .clear }
         return photos.count
     }
     
@@ -109,6 +113,10 @@ extension DetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / CGFloat(photos.count), height: collectionView.bounds.height / CGFloat(photos.count))
+        var divisor: CGFloat = 1
+        if photos.count == 3 || photos.count == 4 {
+            divisor = 2
+        }
+        return CGSize(width: (collectionView.bounds.width / divisor) - 5, height: (collectionView.bounds.height / divisor) - 5)
     }
 }
