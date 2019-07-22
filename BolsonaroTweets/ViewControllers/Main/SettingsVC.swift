@@ -36,10 +36,6 @@ class SettingsVC: UIViewController {
                                                                       .replies])
         retweetSwitch.isOn = toggleSettings[0]
         replySwitch.isOn = toggleSettings[1]
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab2")
     }

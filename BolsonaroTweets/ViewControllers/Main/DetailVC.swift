@@ -20,7 +20,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var retweetStackView: UIStackView!
     @IBOutlet weak var retweetLabel: UILabel!
     @IBOutlet weak var mediaCollectionView: UICollectionView!
-    @IBOutlet weak var mediaContainerView: UIView!
+    
     var tweetID: String?
     
     var photos = [UIImage]() {
@@ -98,7 +98,6 @@ class DetailVC: UIViewController {
                 controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12),
                 controller.view.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24),
                 controller.view.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
-//            didMove(toParent: self)
         } else if tweet.mediaType == "animated_gif" {
             
         }

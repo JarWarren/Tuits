@@ -64,8 +64,25 @@ class Tweet {
                 let qDate = tweetObject.quoted_status?.created_at?.prefix(16),
                 let qName = tweetObject.quoted_status?.user?.name,
                 let qHandle = tweetObject.quoted_status?.user?.screen_name,
-                let qProfPic = tweetObject.quoted_status?.user?.profile_image_url_https else { return }
-            let quote = QuoteTweet(text: qText, date: String(qDate), name: qName, handle: qHandle, imageURL: qProfPic)
+                let qProfPic = tweetObject.quoted_status?.user?.profile_image_url_https,
+                let type = tweetObject.quoted_status?.extended_entities?.media?.first?.type ?? nil else { return }
+            
+            var mediaURLs = [String]()
+            if let media = tweetObject.quoted_status?.extended_entities?.media {
+                switch mediaType {
+                case "photo":
+                    for medium in media {
+                        mediaURLs.append(medium.media_url_https ?? "")
+                    }
+                case nil: return
+                default:
+                    for medium in media {
+                        mediaURLs.append(medium.video_info?.variants?.first?.url ?? "")
+                    }
+                }
+            }
+            
+            let quote = QuoteTweet(type: type, text: qText, date: String(qDate), name: qName, handle: qHandle, imageURL: qProfPic, mediaURLs: mediaURLs)
             self.type = .quote
             self.quote = quote
         }
@@ -98,11 +115,13 @@ class Tweet {
 
 struct QuoteTweet {
     
+    let type: String?
     let text: String?
     let date: String?
     let name: String?
     let handle: String?
     let imageURL: String?
+    var mediaURLs = [String]()
 }
 
 enum TweetType {
