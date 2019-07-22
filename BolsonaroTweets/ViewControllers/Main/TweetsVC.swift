@@ -49,7 +49,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tweet = tweets[indexPath.row]
-        print(tweet.mediaType)
+        print(tweet.mediaType as Any)
         if tweet.type != .quote {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell
             cell?.tweet = tweet
