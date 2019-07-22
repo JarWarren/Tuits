@@ -94,7 +94,7 @@ class TweetController: NetworkManager {
         
         guard let imageUrl = URL(string: url) else { completion(.failure(NetworkResponse.failed)); return }
         
-        print("\n\n\(imageUrl)\n\n")
+//        print("\(imageUrl)")
         
         var request = URLRequest(url: imageUrl)
         request.addValue(("Bearer " + bearerToken), forHTTPHeaderField: "Authorization")
