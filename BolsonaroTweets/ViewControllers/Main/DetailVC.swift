@@ -4,7 +4,7 @@
 //
 //  Created by Jared Warren on 7/20/19.
 //  Copyright © 2019 Warren. All rights reserved.
-// 
+//  swiftlint:disable line_length
 
 import UIKit
 import AVKit
@@ -20,7 +20,8 @@ class DetailVC: UIViewController {
     @IBOutlet weak var retweetStackView: UIStackView!
     @IBOutlet weak var retweetLabel: UILabel!
     @IBOutlet weak var mediaCollectionView: UICollectionView!
-    @IBOutlet weak var mediaContainerView: UIView!
+    
+    var tweetID: String?
     
     var photos = [UIImage]() {
         didSet {
@@ -40,6 +41,7 @@ class DetailVC: UIViewController {
     
     func updateView(with tweet: Tweet, profilePic: UIImage) {
         loadViewIfNeeded()
+        self.tweetID = String(tweet.id)
         if tweet.type != .quote {
             nameLabel.text = tweet.name
             handleLabel.text = "@" + tweet.handle
@@ -62,10 +64,11 @@ class DetailVC: UIViewController {
     }
     
     func handleMedia(for tweet: Tweet) {
-        if tweet.mediaType == "photo" {
+        if tweet.mediaType == "photo" || tweet.mediaType == "animated_gif" {
             var fetchedPhotos = [UIImage]()
-            let finalPhotoIndex = tweet.mediaURLs.count - 1
-            for string in tweet.mediaURLs {
+            let finalPhotoIndex = tweet.type != .quote ? tweet.mediaURLs.count - 1 : tweet.quote!.mediaURLs.count - 1
+            guard let urls = tweet.type != .quote ? tweet.mediaURLs : tweet.quote?.mediaURLs else { return }
+            for string in urls {
                 let tweetIndex = tweet.mediaURLs.firstIndex(of: string)
                 TweetController.fetchImageAt(url: string) { (result) in
                     switch result {
@@ -83,11 +86,21 @@ class DetailVC: UIViewController {
                     }
                 }
             }
-//        } else if tweet.mediaType == "video" {
-//            let player = AVPlayer(url: URL(string: tweet.mediaURLs.first!)!)
-//            let controller = AVPlayerViewController()
-//            controller.player = player
-//            present(controller, animated: true)
+        } else if tweet.mediaType == "video" {
+            guard let urlString = tweet.type != .quote ? tweet.mediaURLs.first : tweet.quote?.mediaURLs.first,
+                let url = URL(string: urlString) else { return }
+            let player = AVPlayer(url: url)
+            let controller = AVPlayerViewController()
+            controller.player = player
+            addChild(controller)
+            controller.view.translatesAutoresizingMaskIntoConstraints = false
+            controller.view.layer.cornerRadius = 6
+            view.addSubview(controller.view)
+            NSLayoutConstraint.activate([
+                controller.view.topAnchor.constraint(equalTo: tweetView.bottomAnchor, constant: 12),
+                controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12),
+                controller.view.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24),
+                controller.view.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
         }
     }
     
@@ -96,6 +109,21 @@ class DetailVC: UIViewController {
     }
     
     @IBAction func goToTwitterButtonTapped(_ sender: Any) {
+        
+        guard let tweetID = tweetID else { return }
+        // TOOD: Test appURL on live device.
+        let appURL = NSURL(string: "twitter://jairbolsonaro/status?id=\(tweetID)")!
+        let webURL = NSURL(string: "https://twitter.com/jairbolsonaro/status/\(tweetID)")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL as URL) {
+            application.open(appURL as URL)
+            print(appURL)
+        } else {
+            application.open(webURL as URL)
+            print(webURL)
+        }
     }
 }
 

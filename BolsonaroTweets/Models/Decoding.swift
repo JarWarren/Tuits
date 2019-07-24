@@ -60,4 +60,5 @@ struct Quote: Decodable {
     let full_text: String?
     let created_at: String?
     let user: User?
+    let extended_entities: Entity?
 }

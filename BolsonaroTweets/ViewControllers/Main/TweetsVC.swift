@@ -25,6 +25,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         bolsoTableView.delegate = self
         bolsoTableView.dataSource = self
         bolsoTableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "tableViewBG"))
+        AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab1")
         tabBarController?.tabBar.items?[1].title = "Settings".localize
         fetchTweets()
         
@@ -33,11 +34,8 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AdManager.displayLiveAds(to: bannerView, on: self, adUnitName: "Tab1")
         if querySettingsDidChange {
             fetchTweets()
-        } else {
-            bolsoTableView.reloadData()
         }
     }
     
@@ -49,11 +47,11 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tweet = tweets[indexPath.row]
-        print(tweet.mediaType)
+        print(tweet.mediaType as Any)
         if tweet.type != .quote {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? TweetCell
             cell?.tweet = tweet
-            cell?.backgroundColor = tweet.mediaType == nil ? .white : #colorLiteral(red: 0.9402887821, green: 0.940446198, blue: 0.9402680397, alpha: 1)
+            cell?.backgroundColor = tweet.mediaType != nil || tweet.quote?.type != nil ? #colorLiteral(red: 0.9402887821, green: 0.940446198, blue: 0.9402680397, alpha: 1) : .white
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuoteCell
@@ -148,6 +146,7 @@ class TweetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 DispatchQueue.main.async {
                     
                     self.bolsoTableView.reloadData()
+                    self.querySettingsDidChange = false
                 }
                 
             case .failure(let error):
