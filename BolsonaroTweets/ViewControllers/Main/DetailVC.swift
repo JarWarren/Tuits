@@ -64,10 +64,11 @@ class DetailVC: UIViewController {
     }
     
     func handleMedia(for tweet: Tweet) {
-        if tweet.mediaType == "photo" {
+        if tweet.mediaType == "photo" || tweet.mediaType == "animated_gif" {
             var fetchedPhotos = [UIImage]()
-            let finalPhotoIndex = tweet.mediaURLs.count - 1
-            for string in tweet.mediaURLs {
+            let finalPhotoIndex = tweet.type != .quote ? tweet.mediaURLs.count - 1 : tweet.quote!.mediaURLs.count - 1
+            guard let urls = tweet.type != .quote ? tweet.mediaURLs : tweet.quote?.mediaURLs else { return }
+            for string in urls {
                 let tweetIndex = tweet.mediaURLs.firstIndex(of: string)
                 TweetController.fetchImageAt(url: string) { (result) in
                     switch result {
@@ -86,7 +87,9 @@ class DetailVC: UIViewController {
                 }
             }
         } else if tweet.mediaType == "video" {
-            let player = AVPlayer(url: URL(string: tweet.mediaURLs.first!)!)
+            guard let urlString = tweet.type != .quote ? tweet.mediaURLs.first : tweet.quote?.mediaURLs.first,
+                let url = URL(string: urlString) else { return }
+            let player = AVPlayer(url: url)
             let controller = AVPlayerViewController()
             controller.player = player
             addChild(controller)
@@ -98,8 +101,6 @@ class DetailVC: UIViewController {
                 controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12),
                 controller.view.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24),
                 controller.view.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
-        } else if tweet.mediaType == "animated_gif" {
-            
         }
     }
     

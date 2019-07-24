@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Watch Interface-->
         <scene sceneID="mOa-CP-APq">
             <objects>
-                <controller id="egS-MT-sOK">
+                <controller id="egS-MT-sOK" customClass="WatchInterface" customModule="BolsonaroTweets">
                     <items>
                         <group width="1" alignment="center" spacing="0.0" id="G3H-sQ-6bw">
                             <items>
@@ -44,6 +44,14 @@
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="hzC-QU-n9V" id="fut-IL-rdJ"/>
+                        <outlet property="handleLabel" destination="3uG-i6-phK" id="rou-ul-sm3"/>
+                        <outlet property="nameLabel" destination="9Sv-MO-Vlo" id="AWL-gv-iSw"/>
+                        <outlet property="profilePicView" destination="Auo-5G-CD4" id="5Up-tq-udq"/>
+                        <outlet property="textLabel" destination="NvX-gz-Ph3" id="Yko-a4-aPA"/>
+                        <outlet property="verifiedLabel" destination="5bP-TK-bZl" id="80P-pC-V7d"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="438.30434782608694" y="496.33928571428572"/>

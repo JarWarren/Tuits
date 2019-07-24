@@ -215,14 +215,6 @@
             </objects>
             <point key="canvasLocation" x="398.55072463768118" y="-226.33928571428569"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="uEd-tl-7tK">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="OuZ-6s-Nse" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sKr-3R-6Ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="478" y="453"/>
-        </scene>
     </scenes>
     <resources>
         <image name="retweet" width="20" height="20"/>
