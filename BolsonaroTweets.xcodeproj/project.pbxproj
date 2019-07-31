@@ -13,7 +13,6 @@
 		7E0C8FB422E22ACB009A52B1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C8FB222E22ACB009A52B1 /* Interface.storyboard */; };
 		7E0C8FB622E22ACE009A52B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C8FB522E22ACE009A52B1 /* Assets.xcassets */; };
 		7E0C8FBD22E22ACE009A52B1 /* BolsonaroTweetsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E0C8FBC22E22ACE009A52B1 /* BolsonaroTweetsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7E0C8FC222E22ACE009A52B1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8FC122E22ACE009A52B1 /* InterfaceController.swift */; };
 		7E0C8FC422E22ACE009A52B1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8FC322E22ACE009A52B1 /* ExtensionDelegate.swift */; };
 		7E0C8FC622E22ACE009A52B1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8FC522E22ACE009A52B1 /* NotificationController.swift */; };
 		7E0C8FC822E22ACE009A52B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C8FC722E22ACE009A52B1 /* Assets.xcassets */; };
@@ -33,9 +32,9 @@
 		7E65212522E35642001D25ED /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E65212422E35642001D25ED /* Detail.storyboard */; };
 		7E65212722E35676001D25ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65212622E35676001D25ED /* DetailVC.swift */; };
 		7E65212F22E509B2001D25ED /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65212E22E509B2001D25ED /* MediaCell.swift */; };
-		7E74398B22E7C693007E693C /* WatchInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E74398A22E7C693007E693C /* WatchInterface.swift */; };
 		7E9D9640222A20B80000C339 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D963F222A20B80000C339 /* Tweet.swift */; };
 		7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED4F60D22583F9C00859B19 /* NetworkManager.swift */; };
+		7EDA439B22F2270D00FFDF2C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA439A22F2270D00FFDF2C /* NetworkController.swift */; };
 		7EE679A32228A071005CE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A22228A071005CE163 /* AppDelegate.swift */; };
 		7EE679A52228A071005CE163 /* TweetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A42228A071005CE163 /* TweetsVC.swift */; };
 		7EE679A72228A071005CE163 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE679A62228A071005CE163 /* SettingsVC.swift */; };
@@ -96,7 +95,6 @@
 		7E0C8FB522E22ACE009A52B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E0C8FB722E22ACE009A52B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E0C8FBC22E22ACE009A52B1 /* BolsonaroTweetsWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BolsonaroTweetsWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E0C8FC122E22ACE009A52B1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		7E0C8FC322E22ACE009A52B1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7E0C8FC522E22ACE009A52B1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		7E0C8FC722E22ACE009A52B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,9 +114,9 @@
 		7E65212422E35642001D25ED /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		7E65212622E35676001D25ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7E65212E22E509B2001D25ED /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
-		7E74398A22E7C693007E693C /* WatchInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchInterface.swift; sourceTree = "<group>"; };
 		7E9D963F222A20B80000C339 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7ED4F60D22583F9C00859B19 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7EDA439A22F2270D00FFDF2C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		7EE6799F2228A071005CE163 /* BolsonaroTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BolsonaroTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE679A22228A071005CE163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE679A42228A071005CE163 /* TweetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsVC.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				7E0C8FB222E22ACB009A52B1 /* Interface.storyboard */,
 				7E0C8FB522E22ACE009A52B1 /* Assets.xcassets */,
 				7E0C8FB722E22ACE009A52B1 /* Info.plist */,
-				7E74398A22E7C693007E693C /* WatchInterface.swift */,
 			);
 			path = BolsonaroTweetsWatch;
 			sourceTree = "<group>";
@@ -189,7 +186,6 @@
 		7E0C8FC022E22ACE009A52B1 /* BolsonaroTweetsWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7E0C8FC122E22ACE009A52B1 /* InterfaceController.swift */,
 				7E0C8FC322E22ACE009A52B1 /* ExtensionDelegate.swift */,
 				7E0C8FC522E22ACE009A52B1 /* NotificationController.swift */,
 				7E0C8FC722E22ACE009A52B1 /* Assets.xcassets */,
@@ -240,6 +236,7 @@
 				7E205F81227E63C500483125 /* SettingsManager.swift */,
 				7E20A2DF225AFFF9006539F5 /* GoogleAdManager.swift */,
 				7E0C8FAC22E185D0009A52B1 /* NotificationManager.swift */,
+				7EDA439A22F2270D00FFDF2C /* NetworkController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -570,7 +567,6 @@
 				7E0C8FD722E22D9F009A52B1 /* Decoding.swift in Sources */,
 				7E0C8FC622E22ACE009A52B1 /* NotificationController.swift in Sources */,
 				7E0C8FC422E22ACE009A52B1 /* ExtensionDelegate.swift in Sources */,
-				7E0C8FC222E22ACE009A52B1 /* InterfaceController.swift in Sources */,
 				7E0C8FD622E22C39009A52B1 /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,10 +583,10 @@
 				7E65212722E35676001D25ED /* DetailVC.swift in Sources */,
 				7E20A2E0225AFFF9006539F5 /* GoogleAdManager.swift in Sources */,
 				7E5194B4222A45AF00F8DA66 /* TweetController.swift in Sources */,
+				7EDA439B22F2270D00FFDF2C /* NetworkController.swift in Sources */,
 				7E0C8FAD22E185D0009A52B1 /* NotificationManager.swift in Sources */,
 				7EE679A52228A071005CE163 /* TweetsVC.swift in Sources */,
 				7ED4F60E22583F9C00859B19 /* NetworkManager.swift in Sources */,
-				7E74398B22E7C693007E693C /* WatchInterface.swift in Sources */,
 				7E5194B2222A434200F8DA66 /* TweetCell.swift in Sources */,
 				7E205F84227E925700483125 /* UIImageExtension.swift in Sources */,
 				7E5194B0222A365200F8DA66 /* Decoding.swift in Sources */,
