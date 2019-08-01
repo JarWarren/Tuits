@@ -16,18 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        registerForPushNotifications()
-        UIApplication.shared.setMinimumBackgroundFetchInterval(900)
         return true
-    }
-    
-    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        let newData = checkForNewTweets()
-        if newData {
-            completionHandler(.newData)
-        } else {
-            completionHandler(.noData)
-        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -50,27 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func registerForPushNotifications() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (_, _) in
-            
-        }
-    }
-    
-    func checkForNewTweets() -> Bool {
-        var newData = false
-        UNUserNotificationCenter.current().getNotificationSettings { settings in
-            guard settings.authorizationStatus == .authorized else { return }
-            let boolAndString = TweetController.newTweetsAvailable()
-            newData = boolAndString.0
-            let tweetText = boolAndString.1
-            if newData {
-                DispatchQueue.main.async {
-                    NotificationManager.scheduleNotification(with: tweetText)
-                }
-            }
-        }
-        return newData
     }
 }
